@@ -1,0 +1,27 @@
+[submodule "libsql"]
+	path = libsql
+	url = git://github.com/bbcarchdev/libsql.git
+[submodule "liburi"]
+	path = liburi
+	url = git://github.com/bbcarchdev/liburi.git
+[submodule "libsparqlclient"]
+	path = libsparqlclient
+	url = git://github.com/bbcarchdev/libsparqlclient.git
+[submodule "anansi"]
+	path = anansi
+	url = git://github.com/bbcarchdev/anansi.git
+[submodule "m4"]
+	path = m4
+	url = git://github.com/bbcarchdev/m4.git
+[submodule "twine"]
+	path = twine
+	url = git://github.com/bbcarchdev/twine.git
+[submodule "spindle"]
+	path = spindle
+	url = git://github.com/bbcarchdev/spindle.git
+[submodule "quilt"]
+	path = quilt
+	url = git://github.com/bbcarchdev/quilt.git
+[submodule "liblod"]
+	path = liblod
+	url = git://github.com/bbcarchdev/liblod.git
