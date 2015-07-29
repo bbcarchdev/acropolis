@@ -12,7 +12,7 @@ To build from a `git` clone, first ensure that all submodules have been checked 
 
     $ git submodule update --init --recursive
 
-You should install the various dependencies that the different components require. Unless you need to, or really know what you're doing, you should probably install versions that are pre-packaged for your operating system. Instructions for each of the dependencies are in the following section.
+You should install the various dependencies that the different components require. Unless you need to, or really know what you're doing, you should probably install versions that are pre-packaged for your operating system. Instructions for each of the dependencies are in section below.
 
 Next, use `autoreconf` to generate the `configure` scripts:
 
@@ -37,6 +37,52 @@ If all goes well, all of the components will be configured and ready to build. T
 Assuming no errors occur, you can now install it with:
 
     $ sudo make install
+
+# Updating components and reconfiguring
+
+From time to time you may wish to update individual components without
+necessarily using `git submodule --update --recursive`. For example, because
+you are working on a feature branch within a specific component.
+Generally, you can do this without re-configuring the whole tree (which can
+be time-consuming).
+
+Remember that by default, submodules are *not checked out on any branch*; that
+is, the `HEAD` points only to the specific commit tracked by the parent
+project. A quick way to tell is if `git symbolic-ref HEAD` reports something
+beginning with `refs/heads/...`, then you have already checked out a branch.
+
+(You may find it useful to put something like this in your shell's
+`$PROMPT_COMMAND`, or equivalent, so that you can always tell quickly
+whether the current working directory is on a branch, and which branch it is).
+
+If you're not currently working on a branch, or working on the wrong branch,
+you can fetch it and check it out with:
+
+```
+$ git fetch origin branchname:branchname
+$ git checkout branchname
+```
+
+Once checked out, or if you have made modifications to `configure.ac`,
+the contents of the `m4` submodule, or any of the `Makefile.am` files, you
+can re-configure within the specific project by running:
+
+```
+$ autoreconf -i
+$ ./config.status --recheck
+```
+
+When you next run `make`, any build system files which need to be updated
+will be, preserving the parameters and important environment variables that
+you passed to the root `configure` script.
+
+Note that if things have changed significantly between the
+originally-configured version and the new one, or if you need to re-configure
+with different options, you may need to re-run `configure` (possibly preceded
+by `autoreconf -i`) from the root and re-run `make`. While dependency-tracking
+should take proper care of rebuilding the correct files in this situation,
+if you run into problems it's usually worth trying `make clean && make` to
+confirm the problem wasn't due to left-over files before reporting bugs.
 
 # Dependencies
 
