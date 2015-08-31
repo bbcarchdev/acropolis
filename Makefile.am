@@ -23,6 +23,6 @@
 
 ACLOCAL_AMFLAGS = -I m4
 
-DIST_SUBDIRS = m4 liblod libsql liburi anansi quilt twine spindle
+DIST_SUBDIRS = m4 libcluster liblod libsql liburi anansi quilt twine spindle
 
 SUBDIRS = @subdirs@

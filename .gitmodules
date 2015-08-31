@@ -25,3 +25,6 @@
 [submodule "liblod"]
 	path = liblod
 	url = git://github.com/bbcarchdev/liblod.git
+[submodule "libcluster"]
+	path = libcluster
+	url = git://github.com/bbcarchdev/libcluster.git

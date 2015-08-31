@@ -44,6 +44,9 @@ here=`pwd`
 AC_CONFIG_SUBDIRS([liblod])
 BT_LIB_ADD_PKGCONFIG([$here/liblod])
 
+AC_CONFIG_SUBDIRS([libcluster])
+BT_LIB_ADD_PKGCONFIG([$here/libcluster])
+
 AC_CONFIG_SUBDIRS([anansi])
 BT_LIB_ADD_PKGCONFIG([$here/anansi])
 
