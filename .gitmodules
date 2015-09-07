@@ -28,3 +28,6 @@
 [submodule "libcluster"]
 	path = libcluster
 	url = git://github.com/bbcarchdev/libcluster.git
+[submodule "libmq"]
+	path = libmq
+	url = git://github.com/bbcarchdev/libmq.git
