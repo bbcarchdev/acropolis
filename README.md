@@ -94,7 +94,7 @@ On Debian-based systems, you can install packaged versions of the dependencies w
         libjansson-dev gtk-doc-tools xsltproc libxml2-dev libssl-dev \
         cmake flex itstool docbook-xml docbook-xsl docbook-xsl-ns \
         gettext python-libxml2 libpq-dev libmysqlclient-dev \
-        libqpid-proton2-dev uuid-dev libncurses5-dev libedit-dev
+        libqpid-proton-dev uuid-dev libncurses5-dev libedit-dev
 
 ## Compiler toolchain
 
