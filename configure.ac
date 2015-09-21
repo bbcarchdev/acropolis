@@ -47,6 +47,9 @@ BT_LIB_ADD_PKGCONFIG([$here/liblod])
 AC_CONFIG_SUBDIRS([libcluster])
 BT_LIB_ADD_PKGCONFIG([$here/libcluster])
 
+AC_CONFIG_SUBDIRS([libmq])
+BT_LIB_ADD_PKGCONFIG([$here/libmq])
+
 AC_CONFIG_SUBDIRS([anansi])
 BT_LIB_ADD_PKGCONFIG([$here/anansi])
 
