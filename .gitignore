@@ -29,3 +29,4 @@ autom4te.cache
 /missing
 /stamp-h1
 /confdefs.h
+/test-driver
