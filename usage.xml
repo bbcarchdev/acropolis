@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Author: Christophe Gueret <christophe.gueret@bbc.co.uk>
+ Author: Mo McRoberts <mo.mcroberts@bbc.co.uk>
+ Author: Simeon van der Steen <simeon.vandersteen@bbc.co.uk>
+ 
+ Copyright (c) 2015 BBC
+  Licensed under the terms of the Open Government Licence, version 2.0.
+  You may obtain a copy of the license at:
+	https://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/
+-->
+<chapter version="5.0" xml:lang="en-gb" xmlns="http://docbook.org/ns" 
+	xmlns:xi="http://www.w3.org/2001/XInclude" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="usage">
+	<title>Usage of Acropolis</title>
+	<para>This document assumes that all the components of Acropolis are
+	correctly compiled and installed on the system</para>
+	
+	<!-- Anansi -->
+	<section xml:id="anansi">
+		<title>Anansi</title>
+		<para>Anansi is the crawler that will go out on the Web of Data to
+		fetch resourses to be index. The list of target ressources is kepts in a
+		MySQL relational database</para>
+		<para>Anansi needs to have MySQL installed, on Debian-based systems this
+		can be done using apt-get</para>
+		<programlisting><![CDATA[apt-get install mysql-server]]></programlisting>
+		<para>Once MySQL is installed, create a database for anansi</para>
+		<programlisting><![CDATA[mysqladmin -u root create anansi]]></programlisting>
+		<para>Then run the daemon in the foreground to verify that it is working fine</para>
+		<programlisting><![CDATA[/opt/res/sbin/crawld -f]]></programlisting>
+		<para>The output should be similar to this:</para>
+		<programlisting><![CDATA[
+		crawld[7242]: DB: Migrating database to version 1
+		crawld[7242]: DB: Migrating database to version 2
+		crawld[7242]: DB: Migrating database to version 3
+		crawld[7242]: DB: Migrating database to version 4
+		crawld[7242]: DB: Migrating database to version 5
+		crawld[7242]: [production] crawler 1/1 (thread 1/1), ready
+		]]></programlisting>
+		<para>Adding a single URI to the queue is done with "crawler-add". For example:</para>
+		<programlisting><![CDATA[/opt/res/bin/crawler-add "http://dbpedia.org/resource/Amsterdam"]]></programlisting>
+		<programlisting><![CDATA[crawler-add: Notice: added <http://dbpedia.org/resource/Amsterdam> to the crawler queue]]></programlisting>
+		<para>When opening a URI Anansi will look at all the other resources 
+		being linked to and add them to the queue. By default it will do so for
+		all the resources irrespective of their license. To enable the processing
+		of only resources published with an Open Data licence it is necessary
+		to replace the "rdf" processor by the "lod" processor. This setting is
+		set in the configuration file /opt/res/crawl.conf. While tuning that file
+		you may also want to have a look at the accepted licenses.</para>
+		<programlisting><![CDATA[
+		[processor]
+		name=lod
+		 
+		[lod:licenses]
+		predicate="http://purl.org/dc/terms/rights"
+		predicate="http://purl.org/dc/terms/license"
+		predicate="http://purl.org/dc/terms/accessRights"
+		predicate="http://creativecommons.org/ns#license"
+		predicate="http://www.w3.org/1999/xhtml/vocab#license"
+		whitelist="http://creativecommons.org/publicdomain/zero/1.0/"
+		]]></programlisting>
+		<para>You may also want to tell the crawler to only whitelist certain URI schemes:</para>
+		<programlisting><![CDATA[
+		[policy:schemes]
+		whitelist=http,https,ftp
+		]]></programlisting>
+    </section>
+
+    <!-- Twine -->
+	<section xml:id="twine">
+		<title>Twine</title>
+		<para>Twine is the component of Acropolis that processes the crawled RDF data. It gets informed
+		of the work to be done through an <link xlink:href="https://www.amqp.org/">AMQP</link> queue that
+		is populated by the "twine-anansi-bridge" daemon. The outcome of its work is stored in a triple
+		store using the SPARQL protocol.</para>
+		<para>The first thing to do is to setup a messaging queue and the triple store.</para>
+		<programlisting><![CDATA[apt-get install qpidd 4store]]></programlisting>
+		<para>We then need to adjust "/opt/res/etc/twine.conf" to tell Twine to 
+		use those freshly installed softwares. In the following we assume 4store
+		runs a database on the port 9000 (which is the default setup on Debian
+		systems)</para>
+		<programlisting><![CDATA[
+		[mq]
+		uri=amqp://127.0.0.1/amq.direct
+		
+		[sparql]
+		update=http://localhost:9000/update/
+		data=http://localhost:9000/data/
+		query=http://localhost:9000/sparql/
+		]]></programlisting>
+		<para>Twine will authenticate himself against the message queue as "anonymous@QPID". 
+		By default this user will be denied access so we need to adjust /etc/qpid/qpidd.acl to
+		change this. Just after the definition of the admin group, and before the catch-all deny
+		rule, add the following:</para>
+		<programlisting><![CDATA[
+		group anon anonymous@QPID
+		acl allow anon all
+		]]></programlisting>
+		<para>Once everything is configured, start the daemon on debug mode to
+		ensure it runs fine</para>
+		<programlisting><![CDATA[/opt/res/sbin/twine-writerd -f -d]]></programlisting>
+		<para>The output should look like:</para>
+		<programlisting><![CDATA[
+		twine-writerd[10109]: SPARQL query endpoint is <http://localhost:9000/sparql/>
+		twine-writerd[10109]: SPARQL update endpoint is <http://localhost:9000/update/>
+		twine-writerd[10109]: SPARQL RESTful endpoint is <http://localhost:9000/data/>
+		twine-writerd[10109]: establishing connection to <amqp://127.0.0.1/amq.direct>
+		twine-writerd[10109]: loading plug-in rdf.so
+		twine-writerd[10109]: invoking plug-in initialisation function for /opt/res/lib/twine/rdf.so
+		twine-writerd[10109]: rdf plug-in: initialising
+		twine-writerd[10109]: registered MIME type: 'application/trig' (RDF TriG)
+		twine-writerd[10109]: registered MIME type: 'application/n-quads' (RDF N-Quads)
+		twine-writerd[10109]: registered MIME type: 'text/x-nquads' (RDF N-Quads)
+		twine-writerd[10109]: loaded plug-in /opt/res/lib/twine/rdf.so
+		twine-writerd[10109]: loading plug-in xslt.so
+		twine-writerd[10109]: invoking plug-in initialisation function for /opt/res/lib/twine/xslt.so
+		twine-writerd[10109]: XSLT: initialising
+		twine-writerd[10109]: XSLT: added MIME type 'application/x-example+xml'
+		twine-writerd[10109]: registered MIME type: 'application/x-example+xml' (Example XSLT-transformable XML)
+		twine-writerd[10109]: loaded plug-in /opt/res/lib/twine/xslt.so
+		twine-writerd[10109]: loading plug-in geonames.so
+		twine-writerd[10109]: invoking plug-in initialisation function for /opt/res/lib/twine/geonames.so
+		twine-writerd[10109]: geonames plug-in: initialising
+		twine-writerd[10109]: registered bulk processor for MIME type: 'text/x-geonames-dump' (Geonames dump)
+		twine-writerd[10109]: loaded plug-in /opt/res/lib/twine/geonames.so
+		twine-writerd[10109]: writerd ready and waiting for messages
+		]]></programlisting>
+</chapter>
