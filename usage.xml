@@ -126,4 +126,64 @@
 		twine-writerd[10109]: loaded plug-in /opt/res/lib/twine/geonames.so
 		twine-writerd[10109]: writerd ready and waiting for messages
 		]]></programlisting>
+		<para>At that stage Twine is waiting for messages to appear on the AMQP
+		message queue. Those messages are to be published by the daemon 
+		twine-anansi-brige. This dameon requires Anansi to write its data on a
+		data store compatible with S3. The two natural options for this are either
+		Amazon AWS or RADOS. On Debian systems, RADOS can be installed with an
+		apt-get:</para>
+		<programlisting><![CDATA[apt-get install ceph radosgw]]></programlisting>
+		<hint>More information about the configarution of Ceph and the Rados
+		gateway can be found on <link xlink:href="http://docs.ceph.com/docs/master/radosgw/config/">
+		the on-line documentation for Ceph</link></hint>
+		<para>The next thing to do is to tell to Anansi and Twine to use S3. To
+		do so start by adjusting the configuration of Anansi in /opt/res/etc/craw.conf
+		to use S3 instead of the disk-based cache (the default setting) :</para>
+		<programlisting><![CDATA[
+		[cache]
+		;; specify the location of the cache
+		; uri=/var/spool/anansi
+		uri=s3://[your anansi bucket]/
+		username=[your user name]
+		password=[your password]
+		endpoint=[eg s.ch.internal or s3.amazonaws.com]
+		]]></programlisting>
+		<para>Then do something similar for Twine in /opt/res/etc/twine.conf.
+		The section is not there by default so it needs to be added entirely</para>
+		<programlisting><![CDATA[
+		;; S3 settings
+		[s3]
+		access=[your access key]
+		secret=[your secret key]
+		endpoint=[eg s.ch.internal or s3.amazonaws.com]
+		]]></programlisting>
+		</section>
+		
+    <!-- Spindle -->
+	<section xml:id="spindle">
+		<title>Spindle</title>
+		<para>Spindle is a processor module for Twine which generates co-reference 
+		proxy objects within a specific set of internal graph. It gets activated
+		and configured from within the configuration file /opt/res/etc/twine.conf</para>
+		<programlisting><![CDATA[
+		;; Configuration specifically for the writer daemon (twine-writerd)
+		[writerd]
+		module=spindle.so
+		
+		;; Spindle settings
+		[spindle]
+		graph=[graph-root-uri]
+		bucket=[your spindle bucket]
+		multigraph=yes
+		db=postgres://mypguser:mypguser@localhost/spindle
+		]]></programlisting>
+		<para>Spindle requires a database to store the indexes it creates and
+		it currently uses PostgreSQL to do that. On Debian systems it can be 
+		easilly installed:</para>
+		<programlisting><![CDATA[apt-get install postgresql postgresql-client]]></programlisting>
+		<para>Follow the instructions on the <link xlink:href="">Debian wiki</link>
+		to create a user "mypguser" with the password "mypguser" and a database
+		"spindle", or change any of this and adjust the db connection URI
+		accordingly.</para>
+	</section>
 </chapter>
