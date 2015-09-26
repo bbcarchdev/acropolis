@@ -162,8 +162,8 @@
     <!-- Spindle -->
 	<section xml:id="spindle">
 		<title>Spindle</title>
-		<para>Spindle is a processor module for Twine which generates co-reference 
-		proxy objects within a specific set of internal graph. It gets activated
+		<para>Spindle is a processor module for Twine and Quilt. It generates co-reference 
+		proxy objects within a specific set of internal graph. For Twine, it gets activated
 		and configured from within the configuration file /opt/res/etc/twine.conf</para>
 		<programlisting><![CDATA[
 		;; Configuration specifically for the writer daemon (twine-writerd)
@@ -175,7 +175,7 @@
 		graph=[graph-root-uri]
 		bucket=[your spindle bucket]
 		multigraph=yes
-		db=postgres://mypguser:mypguser@localhost/spindle
+		db=pgsql://mypguser:mypguser@localhost/spindle
 		]]></programlisting>
 		<para>Spindle requires a database to store the indexes it creates and
 		it currently uses PostgreSQL to do that. On Debian systems it can be 
@@ -185,5 +185,70 @@
 		to create a user "mypguser" with the password "mypguser" and a database
 		"spindle", or change any of this and adjust the db connection URI
 		accordingly.</para>
+	</section>
+	
+	<!-- Quilt -->
+	<section xml:id="quilt">
+		<title>Quilt</title>
+		<para>Quilt is a Web of Data front-end for Acropolis. Quilt needs to be 
+		configured with its Spindle module (which is distinct from Twine module 
+		for Spindle—both together constitute the Spindle project).</para>
+		<para>The Spindle and S3 configuration sections are more or less 
+		identical to those for Twine. These settings go to /opt/res/etc/</para>
+		<programlisting><![CDATA[
+		[quilt]
+		engine=spindle
+		module=spindle.so
+		base=[your graph base]
+		 
+		[spindle]
+		db=pgsql://mypguser:mypguser@localhost/spindle
+		bucket=[your spindle bucket]
+		
+		[s3]
+		endpoint=[eg s.ch.internal or s3.amazonaws.com]
+		access=[your access key]
+		secret=[your secret key]
+		verbose=no
+		]]></programlisting>
+		<para>The next step is to install Apache and configure it to use Quilt
+		to reply to requests concerning the ressources. First install Apache2</para>
+		<programlisting><![CDATA[apt-get install apache2 libapache2-mod-fastcgi]]></programlisting>
+		<para>Then configure an Apache virtual host to accept the http requests, 
+		and route them to the FastCGI module (quilt-fastcgid). To do so, create
+		a file /etc/apache2/sites-available/quilt with the following content :</para>
+		<programlisting><![CDATA[
+		<VirtualHost *:80>
+				ServerName [hostname]
+				DocumentRoot /opt/res/share/quilt/public
+		 
+				Options FollowSymlinks
+		 
+				FastCgiExternalServer /opt/res/share/quilt/public/index-virtual.fcgi -socket /tmp/quilt.sock
+		 
+				CustomLog ${APACHE_LOG_DIR}/quilt.access.log combined
+				ErrorLog ${APACHE_LOG_DIR}/quilt.error.log
+		 
+				RewriteEngine on
+				RewriteCond %{LA-U:REQUEST_FILENAME} !-f
+				RewriteRule ^(.*)$ /index-virtual.fcgi [NS,L]
+		</VirtualHost>
+		]]></programlisting>
+		<para>Normally you would want Apache to start quilt-fastcgid and then 
+		forward the requests to it, but in our case we will start quilt 
+		externally (ourselves), so we can use the debugger if needed. We 
+		therefore use the FastCgiExternalServer apache directive. The file 
+		index-virtual.fcgi should not exist in the document root, so that 
+		requests go via /tmp/quilt.sock. If you do want Apache to start 
+		quilt, then change the rewriterule to /index.fcgi, this file exists by 
+		building quilt, and is a symbolic link to quilt-fastcgid.</para>
+		<para>Once this file is created we activate the necessary modules, the
+		site 'quilt', and we reload apache:</para>
+		<programlisting><![CDATA[
+		a2enmod fastcgi
+		a2enmod rewrite
+		a2ensite quilt
+		service apache2 reload
+		]]></programlisting>
 	</section>
 </chapter>
