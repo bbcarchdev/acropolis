@@ -46,6 +46,25 @@ BT_REQUIRE_LIBURI_INCLUDED
 BT_REQUIRE_LIBSQL_INCLUDED
 BT_REQUIRE_LIBSPARQLCLIENT_INCLUDED
 
+use_docbook_html5=yes
+BT_BUILD_DOCS
+
+XML2HTMLFLAGS="--param \"html.linksfile\" \"'file://\$(abs_top_srcdir)/docbook-html5/res-links.xml'\" \
+  --param \"html.navfile\" \"'file://\$(abs_top_srcdir)/docbook-html5/res-nav.xml'\" \
+  --param \"html.ie78css\" \"'//bbcarchdev.github.io/painting-by-numbers/ie78.css'\""
+AC_SUBST([XML2HTMLFLAGS])
+
+LINKS='${top_srcdir}/docbook-html5/res-links.xml'
+AC_SUBST([LINKS])
+
+NAV='${top_srcdir}/docbook-html5/res-nav.xml'
+AC_SUBST([NAV])
+
+BT_DEFINE_PREFIX
+
+acropolishtdocdir='${docdir}'
+AC_SUBST([acropolishtdocdir])
+
 here=`pwd`
 
 AC_CONFIG_SUBDIRS([liblod])
@@ -72,6 +91,8 @@ BT_LIB_ADD_PKGCONFIG([$here/spindle])
 AC_CONFIG_FILES([
 Makefile
 m4/Makefile
+docbook-html5/Makefile
+docs/Makefile
 ])
 
 AC_OUTPUT

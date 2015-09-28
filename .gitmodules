@@ -31,3 +31,11 @@
 [submodule "libmq"]
 	path = libmq
 	url = git://github.com/bbcarchdev/libmq.git
+[submodule "docs"]
+	path = docs
+	url = git://github.com/bbcarchdev/acropolis.git
+	branch = gh-pages
+[submodule "docbook-html5"]
+	path = docbook-html5
+	url = git://github.com/bbcarchdev/docbook-html5.git
+	branch = gh-pages

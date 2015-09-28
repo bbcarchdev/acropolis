@@ -24,14 +24,16 @@
 ACLOCAL_AMFLAGS = -I m4
 
 DIST_SUBDIRS = m4 libcluster liblod libsql liburi libmq \
-	anansi quilt twine spindle
+	anansi quilt twine spindle docbook-html5 docs
 
-SUBDIRS = @subdirs@
+SUBDIRS = @subdirs@ docbook-html5 docs
 
 BRANCH ?= develop
+DOCS_BRANCH ?= gh-pages
 
 DEVELOP_SUBMODULES = m4 anansi libcluster liblod libmq libsparqlclient \
 	libsql liburi quilt spindle twine
+DOCS_MODULES = docs docbook-html5
 
 checkout:
 	@for submod in $(DEVELOP_SUBMODULES) ; do \
@@ -40,5 +42,12 @@ checkout:
 		git checkout $(BRANCH) && \
 		git pull && \
 		$(MAKE) checkout BRANCH=$(BRANCH) || exit $? && \
+		cd .. ; \
+	done
+	@for submod in $(DOCS_SUBMODULES) ; do \
+		echo "+++ Checking out the latest version of $$submod on $(DOCS_BRANCH)" >&2 ; \
+		cd $$submod && \
+		git checkout $(DOCS_BRANCH) && \
+		git pull && \
 		cd .. ; \
 	done
