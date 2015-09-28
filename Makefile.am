@@ -27,3 +27,18 @@ DIST_SUBDIRS = m4 libcluster liblod libsql liburi libmq \
 	anansi quilt twine spindle
 
 SUBDIRS = @subdirs@
+
+BRANCH ?= develop
+
+DEVELOP_SUBMODULES = m4 anansi libcluster liblod libmq libsparqlclient \
+	libsql liburi quilt spindle twine
+
+checkout:
+	@for submod in $(DEVELOP_SUBMODULES) ; do \
+		echo "+++ Checking out the latest version of $$submod on $(BRANCH)" >&2 ; \
+		cd $$submod && \
+		git checkout $(BRANCH) && \
+		git pull && \
+		$(MAKE) checkout BRANCH=$(BRANCH) || exit $? && \
+		cd .. ; \
+	done
