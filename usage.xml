@@ -180,11 +180,16 @@
 		<para>Spindle requires a database to store the indexes it creates and
 		it currently uses PostgreSQL to do that. On Debian systems it can be 
 		easilly installed:</para>
-		<programlisting><![CDATA[apt-get install postgresql postgresql-client]]></programlisting>
-		<para>Follow the instructions on the <link xlink:href="">Debian wiki</link>
+		<programlisting><![CDATA[apt-get install postgresql postgresql-client postgresql-contrib]]></programlisting>
+		<para>Follow the instructions on the <link xlink:href="https://wiki.debian.org/PostgreSql">Debian wiki</link>
 		to create a user "mypguser" with the password "mypguser" and a database
 		"spindle", or change any of this and adjust the db connection URI
 		accordingly.</para>
+		<para>Also, Spindle uses the <link xlink:href="http://www.postgresql.org/docs/9.1/static/hstore.html">hstore</link>
+		 column type so the module for Postgres must be activated</para>
+		<programlisting><![CDATA[
+		 psql -d spindle -U mypguser -c 'CREATE EXTENSION hstore;'
+		]]></programlisting>
 	</section>
 	
 	<!-- Quilt -->
