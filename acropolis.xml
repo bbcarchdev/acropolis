@@ -62,16 +62,19 @@
 		<title>Introduction</title>
 		<para>
 			Acropolis is the software stack that powers the <link xlink:href="https://bbcarchdev.github.io/res/">Research
-			&amp; Education Space</link> platform. You can read more about how
-			the platform works in our book, <cite><citetitle><link xlink:href="https://bbcarchdev.github.io/inside-acropolis/">Inside Acropolis</link></citetitle></cite>.
-		</para>
-		<para>
-			The Research &amp; Education Space is a platform being jointly
+			&amp; Education Space</link>. The Research &amp; Education Space is a platform being jointly
 			delivered by Jisc, the British Universities Film &amp; Video Council
 			(BUFVC), and the BBC with the aim of bringing as much as possible
 			of the UK’s publicly-held archives, and more besides, to learners
 			and teachers across the UK.
 		</para>
+		<para>
+			You can read more about how the platform works in our book,
+			<cite><citetitle><link xlink:href="https://bbcarchdev.github.io/inside-acropolis/">Inside Acropolis</link></citetitle></cite>.
+		</para>
+	</refsect1>
+	<refsect1>
+		<title>Components</title>
 		<para>
 			The stack consists of a number of different projects, including
 			utility libraries and daemons. Each can be checked out and built
@@ -79,6 +82,98 @@
 			or the whole stack can be built together, which can be useful in
 			development.
 		</para>
+		<para>
+			Unless otherwise noted in each component’s own repository, each is
+			released under the terms of the <cite><citetitle><link xlink:href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</link></citetitle></cite>.
+		</para>
+		<variablelist>
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/anansi/">Anansi</link></term>
+				<listitem>
+					<para>A parallel web crawler with modules for processing RDF and Linked Open Data</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/twine/">Twine</link></term>
+				<listitem>
+					<para>An engine for implementing RDF processing workflows</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/quilt/">Quilt</link></term>
+				<listitem>
+					<para>An application for publishing RDF on the web, both as HTML and as machine-readable data</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/spindle/">Spindle</link></term>
+				<listitem>
+					<para>Plug-in modules for Twine and Quilt which provide the core co-reference aggregation capabilities of the Research &amp; Education Space</para>
+				</listitem>
+			</varlistentry>
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/liblod/">liblod</link></term>
+				<listitem>
+					<para>A library for fetching and processing Linked Open Data published on the Web</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/liburi/">liburi</link></term>
+				<listitem>
+					<para>A library for parsing and manipulating URIs</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/libsql/">libsql</link></term>
+				<listitem>
+					<para>An abstraction layer for working with SQL databases</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/libsparqlclient/">libsparqlclient</link></term>
+				<listitem>
+					<para>A client library for the SPARQL protocol used by most RDF graph databases</para>
+				</listitem>
+			</varlistentry>
+
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/libmq/">libmq</link></term>
+				<listitem>
+					<para>An abstraction library for communicating with message brokers</para>
+				</listitem>
+			</varlistentry>
+			
+			<varlistentry>
+				<term><link xlink:href="https://bbcarchdev.github.io/libcluster/">libcluster</link></term>
+				<listitem>
+					<para>A library designed to make it easier to build applications which have multiple instances working in parallel-processing clusters</para>
+				</listitem>
+			</varlistentry>
+			
+		</variablelist>
+	</refsect1>
+	
+	<refsect1>
+		<title>Pre-requisites</title>
+		<para>
+			To compile and run the stack successfully there are a number of
+			pre-requisites which must first be installed. See the
+			<cite><citetitle><link xlink:href="/acropolis/dependencies">Dependencies</link></citetitle></cite>
+			document for further information. If you're just going clone
+			repositories to look through the code locally, you won’t need to
+			install any of these except for a Git client.
+		</para>
+		
+		<warning>
+			<para>
+				The stack has not been tested on Microsoft Windows, but it may be
+				possible to build the components using Cygwin or the discontinued
+				Microsoft Subsystem for UNIX Applications.
+			</para>
+		</warning>
 	</refsect1>
 	
 	<refsect1>
@@ -115,6 +210,85 @@ Submodule 'spindle' (git://github.com/bbcarchdev/spindle.git) registered for pat
 Submodule 'twine' (git://github.com/bbcarchdev/twine.git) registered for path 'twine'
 Cloning into 'anansi'...
 <emphasis>[remainder of output skipped]</emphasis></screen>
+	</refsect1>
+
+	<refsect1>
+		<title>About the build system</title>
+		<para>
+			The Acropolis stack uses GNU Autotools and <link xlink:href="http://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</link>
+			to build consistently across platforms and manage dependencies. When
+			building from a Git clone in (or if you modify any part of the build
+			logic), you will need to have the autoconf, automake, GNU libtool
+			packages for your operating system installed in order to re-generate
+			<literal>configure</literal> scripts and <literal>Makefile.in</literal>
+			files.
+		</para>
+		<para>
+			The projects make extensive use of Git submodules. Using submodules
+			means that a particular project will reference a specific commit
+			in a sub-project, and recursively checking out the project will
+			always cause that reference to point to the same commit until a
+			change to the parent is committed.
+		</para>
+		<para>
+			The up-side is that subsequent commits can be made to the sub-project
+			without the risk of breaking the parent projects which rely upon it.
+			The down-side is that if you’re going to do development work on a
+			project, you need to check that you’ve checked out a branch and are
+			working on an up-to-date version of it before you begin making
+			changes (use <literal>git status</literal> to tell you: if it reports
+			<literal>Not currently on any branch</literal>, it means the current
+			working copy is a checkout of a specific commit).
+		</para>
+	</refsect1>
+
+	<refsect1>
+		<title>Building Acropolis</title>
+		<para>
+			Use <literal>autoreconf</literal> to generate the configure scripts:
+		</para>
+
+<screen><prompt>$ </prompt> <userinput>autoreconf -i</userinput></screen>
+
+		<para>
+			Now, configure the stack, and all of the sub-projects:
+		</para>
+
+<screen><prompt>$ </prompt> <userinput>./configure</userinput></screen>
+
+		<para>
+			By default, the installation prefix will be <literal>/opt/res</literal>
+			(this is to allow this project to be safely built and installed without
+			conflicting with any individually-installed components of the stack),
+			but if you'd prefer to install to somewhere else, such as
+			<literal>/usr/local</literal>, you can pass an option to
+			configure to specify that:
+		</para>
+
+<screen><prompt>$ </prompt> <userinput>./configure --prefix=/usr/local</userinput></screen>
+
+		<para>
+			If you want to build debugging versions of components (i.e.,
+			compiler optimisations are reduced and debugging symbols are not
+			stripped from compiled binaries), pass the
+			<literal>--enable-debug</literal> option:
+		</para>
+		
+<screen><prompt>$ </prompt> <userinput>./configure --prefix=/usr/local --enable-debug</userinput></screen>
+
+		<para>
+			If all goes well, all of the components will be configured and
+			ready to build. To compile them, simply run <literal>make</literal>:
+		</para>
+
+<screen><prompt>$ </prompt> <userinput>make</userinput></screen>
+
+		<para>
+			Assuming no errors occur, you can now install it with:
+		</para>
+		
+<screen><prompt>$ </prompt> <userinput>sudo make install</userinput></screen>
+
 	</refsect1>
 
 </refentry>

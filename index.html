@@ -26,16 +26,19 @@
 		
 		<p>
 			Acropolis is the software stack that powers the <a href="https://bbcarchdev.github.io/res/">Research
-			&amp; Education Space</a> platform. You can read more about how
-			the platform works in our book, <cite><a href="https://bbcarchdev.github.io/inside-acropolis/">Inside Acropolis</a></cite>.
-		</p>
-		<p>
-			The Research &amp; Education Space is a platform being jointly
+			&amp; Education Space</a>. The Research &amp; Education Space is a platform being jointly
 			delivered by Jisc, the British Universities Film &amp; Video Council
 			(BUFVC), and the BBC with the aim of bringing as much as possible
 			of the UK’s publicly-held archives, and more besides, to learners
 			and teachers across the UK.
 		</p>
+		<p>
+			You can read more about how the platform works in our book,
+			<cite><a href="https://bbcarchdev.github.io/inside-acropolis/">Inside Acropolis</a></cite>.
+		</p>
+	</section>
+	<section class="refsect1"><h1>Components</h1>
+		
 		<p>
 			The stack consists of a number of different projects, including
 			utility libraries and daemons. Each can be checked out and built
@@ -43,6 +46,61 @@
 			or the whole stack can be built together, which can be useful in
 			development.
 		</p>
+		<p>
+			Unless otherwise noted in each component’s own repository, each is
+			released under the terms of the <cite><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></cite>.
+		</p>
+		<dl>
+				<dt><a href="https://bbcarchdev.github.io/anansi/">Anansi</a></dt>
+				<dd>A parallel web crawler with modules for processing RDF and Linked Open Data</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/twine/">Twine</a></dt>
+				<dd>An engine for implementing RDF processing workflows</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/quilt/">Quilt</a></dt>
+				<dd>An application for publishing RDF on the web, both as HTML and as machine-readable data</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/spindle/">Spindle</a></dt>
+				<dd>Plug-in modules for Twine and Quilt which provide the core co-reference aggregation capabilities of the Research &amp; Education Space</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/liblod/">liblod</a></dt>
+				<dd>A library for fetching and processing Linked Open Data published on the Web</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/liburi/">liburi</a></dt>
+				<dd>A library for parsing and manipulating URIs</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/libsql/">libsql</a></dt>
+				<dd>An abstraction layer for working with SQL databases</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/libsparqlclient/">libsparqlclient</a></dt>
+				<dd>A client library for the SPARQL protocol used by most RDF graph databases</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/libmq/">libmq</a></dt>
+				<dd>An abstraction library for communicating with message brokers</dd>
+			
+				<dt><a href="https://bbcarchdev.github.io/libcluster/">libcluster</a></dt>
+				<dd>A library designed to make it easier to build applications which have multiple instances working in parallel-processing clusters</dd>
+			</dl>
+	</section>
+	
+	<section class="refsect1"><h1>Pre-requisites</h1>
+		
+		<p>
+			To compile and run the stack successfully there are a number of
+			pre-requisites which must first be installed. See the
+			<cite><a href="/acropolis/dependencies">Dependencies</a></cite>
+			document for further information. If you're just going clone
+			repositories to look through the code locally, you won’t need to
+			install any of these except for a Git client.
+		</p>
+		
+		<aside class="warning">
+			<p>
+				The stack has not been tested on Microsoft Windows, but it may be
+				possible to build the components using Cygwin or the discontinued
+				Microsoft Subsystem for UNIX Applications.
+			</p>
+		</aside>
 	</section>
 	
 	<section class="refsect1"><h1>Getting Acropolis</h1>
@@ -79,6 +137,85 @@ Submodule 'spindle' (git://github.com/bbcarchdev/spindle.git) registered for pat
 Submodule 'twine' (git://github.com/bbcarchdev/twine.git) registered for path 'twine'
 Cloning into 'anansi'...
 <em>[remainder of output skipped]</em></samp></pre>
+	</section>
+
+	<section class="refsect1"><h1>About the build system</h1>
+		
+		<p>
+			The Acropolis stack uses GNU Autotools and <a href="http://www.freedesktop.org/wiki/Software/pkg-config/">pkg-config</a>
+			to build consistently across platforms and manage dependencies. When
+			building from a Git clone in (or if you modify any part of the build
+			logic), you will need to have the autoconf, automake, GNU libtool
+			packages for your operating system installed in order to re-generate
+			<code class="literal">configure</code> scripts and <code class="literal">Makefile.in</code>
+			files.
+		</p>
+		<p>
+			The projects make extensive use of Git submodules. Using submodules
+			means that a particular project will reference a specific commit
+			in a sub-project, and recursively checking out the project will
+			always cause that reference to point to the same commit until a
+			change to the parent is committed.
+		</p>
+		<p>
+			The up-side is that subsequent commits can be made to the sub-project
+			without the risk of breaking the parent projects which rely upon it.
+			The down-side is that if you’re going to do development work on a
+			project, you need to check that you’ve checked out a branch and are
+			working on an up-to-date version of it before you begin making
+			changes (use <code class="literal">git status</code> to tell you: if it reports
+			<code class="literal">Not currently on any branch</code>, it means the current
+			working copy is a checkout of a specific commit).
+		</p>
+	</section>
+
+	<section class="refsect1"><h1>Building Acropolis</h1>
+		
+		<p>
+			Use <code class="literal">autoreconf</code> to generate the configure scripts:
+		</p>
+
+<pre class="output"><samp><samp class="output prompt">$ </samp> <kbd>autoreconf -i</kbd></samp></pre>
+
+		<p>
+			Now, configure the stack, and all of the sub-projects:
+		</p>
+
+<pre class="output"><samp><samp class="output prompt">$ </samp> <kbd>./configure</kbd></samp></pre>
+
+		<p>
+			By default, the installation prefix will be <code class="literal">/opt/res</code>
+			(this is to allow this project to be safely built and installed without
+			conflicting with any individually-installed components of the stack),
+			but if you'd prefer to install to somewhere else, such as
+			<code class="literal">/usr/local</code>, you can pass an option to
+			configure to specify that:
+		</p>
+
+<pre class="output"><samp><samp class="output prompt">$ </samp> <kbd>./configure --prefix=/usr/local</kbd></samp></pre>
+
+		<p>
+			If you want to build debugging versions of components (i.e.,
+			compiler optimisations are reduced and debugging symbols are not
+			stripped from compiled binaries), pass the
+			<code class="literal">--enable-debug</code> option:
+		</p>
+		
+<pre class="output"><samp><samp class="output prompt">$ </samp> <kbd>./configure --prefix=/usr/local --enable-debug</kbd></samp></pre>
+
+		<p>
+			If all goes well, all of the components will be configured and
+			ready to build. To compile them, simply run <code class="literal">make</code>:
+		</p>
+
+<pre class="output"><samp><samp class="output prompt">$ </samp> <kbd>make</kbd></samp></pre>
+
+		<p>
+			Assuming no errors occur, you can now install it with:
+		</p>
+		
+<pre class="output"><samp><samp class="output prompt">$ </samp> <kbd>sudo make install</kbd></samp></pre>
+
 	</section>
 
 </article></body>
