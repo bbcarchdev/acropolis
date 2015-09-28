@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry xml:id="acropolis" xmlns="http://docbook.org/ns" xmlns:xlink="http://www.w3.org/1999/xlink" version="5.0" xml:lang="en">
+	<info>
+		<productname>Acropolis</productname>
+		<author>
+			<personname>
+				<firstname>Christophe</firstname>
+				<surname>Gueret</surname>
+			</personname>
+			<affiliation>
+				<org>
+					<orgname>BBC</orgname>
+					<orgdiv>Archive Development</orgdiv>
+					<uri>http://www.bbc.co.uk/archive/</uri>
+				</org>
+			</affiliation>
+		</author>
+		<author>
+			<personname>
+				<firstname>Simeon</firstname>
+				<surname>van der Steen</surname>
+			</personname>
+			<affiliation>
+				<org>
+					<orgname>BBC</orgname>
+					<orgdiv>Archive Development</orgdiv>
+					<uri>http://www.bbc.co.uk/archive/</uri>
+				</org>
+			</affiliation>
+		</author>
+		<author>
+			<personname>
+				<firstname>Mo</firstname>
+				<surname>McRoberts</surname>
+			</personname>
+			<affiliation>
+				<org>
+					<orgname>BBC</orgname>
+					<orgdiv>Archive Development</orgdiv>
+					<uri>http://www.bbc.co.uk/archive/</uri>
+				</org>
+			</affiliation>
+		</author>
+		<copyright>
+			<year>2015</year>
+			<holder>BBC</holder>
+		</copyright>
+	</info>
+	
+	<refmeta>
+		<refentrytitle>Acropolis</refentrytitle>
+		<manvolnum>7</manvolnum>
+		<refmiscinfo class="source">Research &amp; Education Space</refmiscinfo>
+	</refmeta>
+
+	<refnamediv>
+		<refname>Acropolis</refname>
+		<refpurpose>Linked Open Data processing stack</refpurpose>
+	</refnamediv>
+
+	<refsect1>
+		<title>Introduction</title>
+		<para>
+			Acropolis is the software stack that powers the <link xlink:href="https://bbcarchdev.github.io/res/">Research
+			&amp; Education Space</link> platform. You can read more about how
+			the platform works in our book, <cite><citetitle><link xlink:href="https://bbcarchdev.github.io/inside-acropolis/">Inside Acropolis</link></citetitle></cite>.
+		</para>
+		<para>
+			The Research &amp; Education Space is a platform being jointly
+			delivered by Jisc, the British Universities Film &amp; Video Council
+			(BUFVC), and the BBC with the aim of bringing as much as possible
+			of the UK’s publicly-held archives, and more besides, to learners
+			and teachers across the UK.
+		</para>
+		<para>
+			The stack consists of a number of different projects, including
+			utility libraries and daemons. Each can be checked out and built
+			individually (as would typically be the case in a real deployment),
+			or the whole stack can be built together, which can be useful in
+			development.
+		</para>
+	</refsect1>
+	
+	<refsect1>
+		<title>Getting Acropolis</title>
+		<para>
+			The <cite><citetitle><link xlink:href="https://github.com/bbcarchdev/acropolis">bbcarchdev/acropolis</link></citetitle></cite>
+			Github repository hosts the Acropolis meta-project (it is a project
+			which exists primarily to make it easier to build the various
+			sub-projects together).
+		</para>
+		<para>
+			You can download the repository, and all of the linked sub-projects,
+			using <application>git</application>:
+		</para>
+<screen><prompt>$ </prompt> <userinput>git clone git://github.com/bbcarchdev/acropolis.git</userinput>
+remote: Counting objects: 120, done.
+remote: Compressing objects: 100% (112/112), done.
+remote: Total 120 (delta 56), reused 0 (delta 0)
+Receiving objects: 100% (120/120), 24.16 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (56/56), done.
+Checking connectivity... done.
+<prompt> $ </prompt> <userinput>cd acropolis</userinput>
+<prompt> $ </prompt> <userinput>git submodule update --init --recursive</userinput>
+Submodule 'anansi' (git://github.com/bbcarchdev/anansi.git) registered for path 'anansi'
+Submodule 'libcluster' (git://github.com/bbcarchdev/libcluster.git) registered for path 'libcluster'
+Submodule 'liblod' (git://github.com/bbcarchdev/liblod.git) registered for path 'liblod'
+Submodule 'libmq' (git://github.com/bbcarchdev/libmq.git) registered for path 'libmq'
+Submodule 'libsparqlclient' (git://github.com/bbcarchdev/libsparqlclient.git) registered for path 'libsparqlclient'
+Submodule 'libsql' (git://github.com/bbcarchdev/libsql.git) registered for path 'libsql'
+Submodule 'liburi' (git://github.com/bbcarchdev/liburi.git) registered for path 'liburi'
+Submodule 'm4' (git://github.com/bbcarchdev/m4.git) registered for path 'm4'
+Submodule 'quilt' (git://github.com/bbcarchdev/quilt.git) registered for path 'quilt'
+Submodule 'spindle' (git://github.com/bbcarchdev/spindle.git) registered for path 'spindle'
+Submodule 'twine' (git://github.com/bbcarchdev/twine.git) registered for path 'twine'
+Cloning into 'anansi'...
+<emphasis>[remainder of output skipped]</emphasis></screen>
+	</refsect1>
+
+</refentry>

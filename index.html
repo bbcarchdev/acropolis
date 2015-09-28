@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+			<meta charset="utf-8" />
+			<!--[if lt IE 9]><script>document.createElement('header');document.createElement('nav');document.createElement('section');document.createElement('article');document.createElement('aside');document.createElement('footer');</script><![endif]-->
+		<title>Acropolis</title>
+	</head>
+<body class="refentry"><header>
+		<div class="masthead"></div>
+		<h1>Acropolis</h1><h2>Linked Open Data processing stack</h2></header><article>
+	
+	
+	
+
+	
+
+	<section class="refsect1"><h1>Introduction</h1>
+		
+		<p>
+			Acropolis is the software stack that powers the <a href="https://bbcarchdev.github.io/res/">Research
+			&amp; Education Space</a> platform. You can read more about how
+			the platform works in our book, <cite><a href="https://bbcarchdev.github.io/inside-acropolis/">Inside Acropolis</a></cite>.
+		</p>
+		<p>
+			The Research &amp; Education Space is a platform being jointly
+			delivered by Jisc, the British Universities Film &amp; Video Council
+			(BUFVC), and the BBC with the aim of bringing as much as possible
+			of the UK’s publicly-held archives, and more besides, to learners
+			and teachers across the UK.
+		</p>
+		<p>
+			The stack consists of a number of different projects, including
+			utility libraries and daemons. Each can be checked out and built
+			individually (as would typically be the case in a real deployment),
+			or the whole stack can be built together, which can be useful in
+			development.
+		</p>
+	</section>
+	
+	<section class="refsect1"><h1>Getting Acropolis</h1>
+		
+		<p>
+			The <cite><a href="https://github.com/bbcarchdev/acropolis">bbcarchdev/acropolis</a></cite>
+			Github repository hosts the Acropolis meta-project (it is a project
+			which exists primarily to make it easier to build the various
+			sub-projects together).
+		</p>
+		<p>
+			You can download the repository, and all of the linked sub-projects,
+			using git:
+		</p>
+<pre class="output"><samp><samp class="output prompt">$ </samp> <kbd>git clone git://github.com/bbcarchdev/acropolis.git</kbd>
+remote: Counting objects: 120, done.
+remote: Compressing objects: 100% (112/112), done.
+remote: Total 120 (delta 56), reused 0 (delta 0)
+Receiving objects: 100% (120/120), 24.16 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (56/56), done.
+Checking connectivity... done.
+<samp class="output prompt"> $ </samp> <kbd>cd acropolis</kbd>
+<samp class="output prompt"> $ </samp> <kbd>git submodule update --init --recursive</kbd>
+Submodule 'anansi' (git://github.com/bbcarchdev/anansi.git) registered for path 'anansi'
+Submodule 'libcluster' (git://github.com/bbcarchdev/libcluster.git) registered for path 'libcluster'
+Submodule 'liblod' (git://github.com/bbcarchdev/liblod.git) registered for path 'liblod'
+Submodule 'libmq' (git://github.com/bbcarchdev/libmq.git) registered for path 'libmq'
+Submodule 'libsparqlclient' (git://github.com/bbcarchdev/libsparqlclient.git) registered for path 'libsparqlclient'
+Submodule 'libsql' (git://github.com/bbcarchdev/libsql.git) registered for path 'libsql'
+Submodule 'liburi' (git://github.com/bbcarchdev/liburi.git) registered for path 'liburi'
+Submodule 'm4' (git://github.com/bbcarchdev/m4.git) registered for path 'm4'
+Submodule 'quilt' (git://github.com/bbcarchdev/quilt.git) registered for path 'quilt'
+Submodule 'spindle' (git://github.com/bbcarchdev/spindle.git) registered for path 'spindle'
+Submodule 'twine' (git://github.com/bbcarchdev/twine.git) registered for path 'twine'
+Cloning into 'anansi'...
+<em>[remainder of output skipped]</em></samp></pre>
+	</section>
+
+</article></body>
+</html>
