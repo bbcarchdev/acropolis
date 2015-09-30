@@ -343,6 +343,8 @@ Download the latest `rasqal-VERSION.tar.gz` package (e.g., `rasqal-0.9.33.tar.gz
 
 On Debian-based systems you can install the `librdf0` and `librdf0-dev` packages.
 
+*Note:* if you find that Twine is unable to locate any contexts (named graphs) in parsed RDF, it may be that the version of librdf you have installed is too old. If you've installed the latest packaged version, you may need to build from a [clone of the librdf Git repository](https://github.com/dajobe/librdf).
+
 To build manually:
 
 Download the latest `redland-VERSION.tar.gz` package (e.g., `redland-1.0.17.tar.gz`) from the [librdf source package repository](http://download.librdf.org/source/). Unpack the sources, which will create a `redland-VERSION` directory (for example, `redland-1.0.17`); change to this directory, and execute the following:
