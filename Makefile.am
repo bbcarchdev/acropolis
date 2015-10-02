@@ -24,7 +24,7 @@
 ACLOCAL_AMFLAGS = -I m4
 
 DIST_SUBDIRS = m4 libcluster liblod libsql liburi libmq \
-	anansi quilt twine spindle docbook-html5 docs
+	anansi quilt twine spindle docbook-html5 docs libawsclient
 
 SUBDIRS = @subdirs@ docbook-html5 docs
 
@@ -32,7 +32,7 @@ BRANCH ?= develop
 DOCS_BRANCH ?= gh-pages
 
 DEVELOP_SUBMODULES = m4 anansi libcluster liblod libmq libsparqlclient \
-	libsql liburi quilt spindle twine
+	libsql liburi quilt spindle twine libawsclient
 DOCS_MODULES = docs docbook-html5
 
 checkout:

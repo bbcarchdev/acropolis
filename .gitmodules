@@ -39,3 +39,6 @@
 	path = docbook-html5
 	url = git://github.com/bbcarchdev/docbook-html5.git
 	branch = gh-pages
+[submodule "libawsclient"]
+	path = libawsclient
+	url = git://github.com/bbcarchdev/libawsclient.git

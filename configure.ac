@@ -70,6 +70,9 @@ here=`pwd`
 AC_CONFIG_SUBDIRS([liblod])
 BT_LIB_ADD_PKGCONFIG([$here/liblod])
 
+AC_CONFIG_SUBDIRS([libawsclient])
+BT_LIB_ADD_PKGCONFIG([$here/libawsclient])
+
 AC_CONFIG_SUBDIRS([libcluster])
 BT_LIB_ADD_PKGCONFIG([$here/libcluster])
 
