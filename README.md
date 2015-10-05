@@ -148,6 +148,27 @@ On Debian-based systems, you can install the `libtool` and `libltdl-dev` package
     $ make
     $ sudo make install
 
+## OpenSSL
+
+On Debian-based systems, you can install the `libssl-dev` package.
+
+For Mac OS X users, note that recent versions of the operating system have deprecated the bundled OpenSSL and Mac OS X 10.11 (El Capitan) removes it from the SDK altogether (although a version of the libraries is still present on the system for binary compatibility). You should download and build build from source if you're running, or planning to run, Mac OS X 10.10 (Yosemite) or newer. On other systems, it’s *highly* recommended that you install
+the pre-packaged version of OpenSSL.
+
+Note also that on Mac OS X, OpenSSL is no longer required by Acropolis components themselves, as Apple’s CommonCrypto APIs will be used instead where available, but other packages (such as `libqpid-proton`) do require it.
+
+To build from source:
+
+    # On Mac OS X only:
+	$ ./Configure darwin64-x86_64-cc --prefix=/usr/local --openssldir=/usr/local/share/openssl shared
+	
+	# On other systems:
+	$ ./config --prefix=/usr/local --openssldir=/usr/local/share/openssl
+	
+	# On all platforms:
+	$ make
+	$ sudo make install
+
 ## pkg-config
 
 The `pkg-config` utility is used by the build system to locate different components. Generally, you should use your operating system's provided packages if they exist.
@@ -391,7 +412,13 @@ On Debian-based systems, you can install `libqpid-proton-dev`.
     # The -DNOBUILD_JAVA=1 command-line option can be omitted if you have a 
     # working Java setup -- it is not required to build the Research & Education
     # Space, however.
-    $ cmake .. -DNOBUILD_JAVA=1
+    $ cmake .. -DNOBUILD_JAVA=1 -DCMAKE_OSX_ARCHITECTURES=x86_64
+    
+    # With newer versions of qpid-proton, you must specify -DBUILD_JAVA=0 instead of
+    # -DNOBUILD_JAVA=1: if CMake reports that NOBUILD_JAVA was a "manually-specified
+    # variable not used by the project", when executing the above, then run the
+    # following instead:
+    $ cmake .. -DBUILD_JAVA=0 -DCMAKE_OSX_ARCHITECTURES=x86_64
     
     $ make
     
