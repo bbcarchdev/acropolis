@@ -42,3 +42,12 @@
 [submodule "libawsclient"]
 	path = libawsclient
 	url = git://github.com/bbcarchdev/libawsclient.git
+[submodule "twine-anansi-bridge/m4"]
+	path = twine-anansi-bridge/m4
+	url = git://github.com/bbcarchdev/m4.git
+[submodule "twine-anansi-bridge/libsupport"]
+	path = twine-anansi-bridge/libsupport
+	url = git://github.com/bbcarchdev/libsupport.git
+[submodule "twine-anansi-bridge"]
+	path = twine-anansi-bridge
+	url = git://github.com/bbcarchdev/twine-anansi-bridge.git

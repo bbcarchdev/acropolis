@@ -1,4 +1,4 @@
-## The Research & Education Space
+## Acropolis: The Research & Education Space software stack
 ##
 ## A platform being jointly delivered by Jisc, the British Universities
 ## Film & Video Council (BUFVC), and the BBC with the aim of bringing as
@@ -21,7 +21,7 @@
 ##  See the License for the specific language governing permissions and
 ##  limitations under the License.
 
-AC_INIT([res],m4_esyscmd([/bin/sh m4/get-version.sh]),[RESFeedback@bbc.co.uk],,[https://github.com/bbcarchdev/res])
+AC_INIT([res],m4_esyscmd([/bin/sh m4/get-version.sh]),[RESFeedback@bbc.co.uk],,[https://bbcarchdev.github.io/acropolis/])
 AC_CONFIG_MACRO_DIR([m4])
 
 dnl Ordinarily, we would not do this, but as this is a developer-focussed
@@ -87,6 +87,9 @@ BT_LIB_ADD_PKGCONFIG([$here/quilt])
 
 AC_CONFIG_SUBDIRS([twine])
 BT_LIB_ADD_PKGCONFIG([$here/twine])
+
+AC_CONFIG_SUBDIRS([twine-anansi-bridge])
+BT_LIB_ADD_PKGCONFIG([$here/twine-anansi-bridge])
 
 AC_CONFIG_SUBDIRS([spindle])
 BT_LIB_ADD_PKGCONFIG([$here/spindle])
