@@ -1,0 +1,5 @@
+FROM postgres:9.4
+MAINTAINER Simeon van der Steen <simeon.vandersteen@bbc.co.uk>
+
+COPY postgresmodules.sh /docker-entrypoint-initdb.d/
+

@@ -1,0 +1,24 @@
+spindle:
+  build: ../spindle
+  dockerfile: docker/Dockerfile
+  ports:
+   - "80:80"
+  links:
+   - postgres:postgres
+   - 4store:4store
+   - s3:s3
+
+postgres:
+  build: .
+  dockerfile: Dockerfile-postgres
+  environment:
+   - POSTGRES_PASSWORD=postgres
+
+4store:
+  build: .
+  dockerfile: Dockerfile-4store
+
+s3:
+  build: .
+  dockerfile: Dockerfile-s3
+
