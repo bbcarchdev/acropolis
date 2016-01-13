@@ -30,7 +30,7 @@ nodaemon=true\n\
 command=/usr/local/bin/4s-backend -D default\n\
 \n\
 [program:s4-httpd]\n\
-command=/usr/local/bin/4s-httpd -D default \
+command=/usr/local/bin/4s-httpd -s -1 -D default \
 ' > /etc/supervisor/conf.d/4store.conf
 
 EXPOSE 8080
