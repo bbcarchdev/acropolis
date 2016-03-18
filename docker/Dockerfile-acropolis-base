@@ -1,0 +1,20 @@
+FROM debian:7.9
+MAINTAINER Simeon van der Steen <simeon.vandersteen@bbc.co.uk>
+
+ENV DEBIAN_FRONTEND noninteractive
+
+# add bbcarchdev apt repo
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9E16A4D302DA096A && \
+	echo "deb [arch=amd64] http://apt.bbcarchdev.net/debian/ wheezy main ports live stage dev" \
+	>> /etc/apt/sources.list.d/bbcarchdev-wheezy.list && apt-get update
+
+RUN apt-get install -y --no-install-recommends \
+	build-essential libtool libltdl-dev automake \
+	autoconf pkg-config libcurl4-gnutls-dev autotools-dev \
+	libraptor2-dev librasqal3-dev librdf0-dev libfcgi-dev \
+	libjansson-dev gtk-doc-tools xsltproc libxml2-dev libssl-dev \
+	cmake flex itstool docbook-xml docbook-xsl docbook-xsl-ns \
+	gettext python-libxml2 libpq-dev libmysqlclient-dev \
+	uuid-dev libncurses5-dev libedit-dev raptor2-utils gdb vim \
+	libqpid-proton-dev
+

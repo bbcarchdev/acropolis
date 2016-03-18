@@ -1,0 +1,9 @@
+FROM lphoward/fake-s3
+MAINTAINER Simeon van der Steen <simeon.vandersteen@bbc.co.uk>
+
+# Create default buckets
+RUN mkdir /fakes3_root/spindle /fakes3_root/anansi
+
+ENV SPINDLE_BUCKET spindle
+ENV ANANSI_BUCKET anansi
+
