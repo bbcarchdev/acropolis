@@ -19,27 +19,21 @@ until nc -z fourstore 9000; do
     sleep 2
 done
 
-# Wait until someone has initialised everything
-until [ -f /ready ]; do
-    echo "$(date) - waiting for someone to init everything..."
-	sleep 1
-	
-	if [ ! -f /busy ]; then
-		touch /busy
-		
-		echo "Create the DBs in Postgres..."
+# Is it this container doing all the init ?
+if [ "${DOINIT}" = "true" ]; then
+	if [ ! -f /ready ]; then
+		echo "$(date) - Create the DBs in Postgres..."
 		psql --host=postgres --username=postgres -c "CREATE DATABASE \"anansi\""
 		psql --host=postgres --username=postgres -c "CREATE DATABASE \"spindle\""
 		psql --host=postgres --username=postgres -c "CREATE DATABASE \"cluster\""
 		psql --host=postgres --username=postgres --dbname=spindle -c "CREATE EXTENSION \"hstore\""
 		
-		echo "Initialising Twine..."
+		echo "$(date) - Initialising Twine..."
 	    twine -d -c /usr/etc/twine.conf -S    
 	    
 		touch /ready
-		rm /busy
 	fi
-done
+fi
 
 # Print some doc
 cat /usr/local/src/docker.md

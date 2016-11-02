@@ -9,6 +9,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:80
+    environment:
+      - DOINIT=true
+    command: echo
     depends_on:
       - postgres
       - fourstore
@@ -26,11 +29,9 @@ services:
     command: /usr/sbin/crawld -d -c /usr/etc/crawl.conf -f
     depends_on:
       - postgres
-      - fourstore
       - s3
     links:
       - postgres
-      - fourstore
       - s3
     volumes_from:
       - acropolis
