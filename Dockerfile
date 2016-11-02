@@ -51,6 +51,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
 # Copy the source tree
 COPY . /usr/local/src
 VOLUME ["/usr/local/src"]
+VOLUME ["/data"]
 WORKDIR /usr/local/src
 
 # Compile everything

@@ -20,29 +20,23 @@ until nc -z fourstore 9000; do
 done
 
 # Wait until someone has initialised everything
-until [ -f /data/ready ]; do
-    echo "$(date) - waiting for someone to init everything..."
-	sleep 1
-	
-	if [ ! -f /data/busy ]; then
-		touch /data/busy
-		
-		echo "Create the DBs in Postgres..."
+if [ "${DOINIT}" = "true" ]; then
+	if [ ! -f /ready ]; then
+		echo "$(date) - Create the DBs in Postgres..."
 		psql --host=postgres --username=postgres -c "CREATE DATABASE \"anansi\""
 		psql --host=postgres --username=postgres -c "CREATE DATABASE \"spindle\""
 		psql --host=postgres --username=postgres -c "CREATE DATABASE \"cluster\""
 		psql --host=postgres --username=postgres --dbname=spindle -c "CREATE EXTENSION \"hstore\""
 		
-		echo "Initialising Twine..."
+		echo "$(date) -  Initialising Twine..."
 	    twine -d -c /usr/etc/twine.conf -S    
 	    
-		touch /data/ready
-		rm /data/busy
+		touch /ready
+		
+		# Print some doc
+		cat /usr/local/src/docker.md
 	fi
-done
-
-# Print some doc
-cat /usr/local/src/docker.md
+fi
 
 # Run the requested command
 exec "$@"

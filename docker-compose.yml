@@ -7,8 +7,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - 80:80
+    environment:
+      - DOINIT=true
     depends_on:
       - postgres
       - fourstore
@@ -27,9 +27,11 @@ services:
     command: /usr/sbin/crawld -d -c /usr/etc/crawl.conf -f
     depends_on:
       - postgres
+      - fourstore
       - s3
     links:
       - postgres
+      - fourstore
       - s3
     volumes_from:
       - acropolis
@@ -91,6 +93,8 @@ services:
       - postgres
       - fourstore
       - s3
+    ports:
+      - 80:80
     volumes_from:
       - acropolis
     
@@ -104,6 +108,5 @@ services:
     image: vm-10-100-0-25.ch.bbcarchdev.net/s3
 
 volumes:
-  data:
-    driver: local
+  data: {}
     
