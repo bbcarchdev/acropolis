@@ -9,9 +9,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - 80:80
-    environment:
-      - DOINIT=true
-    command: echo
     depends_on:
       - postgres
       - fourstore
@@ -22,6 +19,7 @@ services:
       - s3
     volumes:
       - .:/usr/local/src
+      - data:/data
 
   anansi:
     container_name: anansi
@@ -104,3 +102,8 @@ services:
 
   s3:
     image: vm-10-100-0-25.ch.bbcarchdev.net/s3
+
+volumes:
+  data:
+    driver: local
+    
