@@ -1,0 +1,105 @@
+version: '2'
+services:
+  acropolis:
+    privileged: true
+    container_name: acropolis
+    image: acropolis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes:
+      - .:/usr/local/src
+
+  anansi:
+    container_name: anansi
+    image: acropolis
+    command: /usr/sbin/crawld -d -c /usr/etc/crawl.conf -f
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+      
+  twine-anansi:
+    container_name: twine-anansi
+    image: acropolis
+    command: /usr/sbin/twine-writerd -d -c /usr/etc/twine-anansi.conf -f
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+      
+  twine-spindle:
+    container_name: twine-spindle
+    image: acropolis
+    command: /usr/sbin/twine-writerd -d -c /usr/etc/twine.conf -f
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+      
+  twine-remote:
+    container_name: twine-remote
+    image: acropolis
+    command: /usr/bin/python3 /usr/local/src/docker/remote.py
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+    
+  quilt:
+    container_name: quilt
+    image: acropolis
+    command: /usr/sbin/apache2 -D FOREGROUND
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+    
+  postgres:
+    image: postgres:9.1
+
+  fourstore:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/4store
+
+  s3:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/s3
