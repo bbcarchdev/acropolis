@@ -79,6 +79,9 @@ RUN cp /usr/share/doc/quilt/apache2-example.conf /etc/apache2/sites-available/qu
 RUN	ln -sf /dev/stdout /var/log/apache2/quilt.access.log \
 	&& ln -sf /dev/stderr /var/log/apache2/quilt.error.log \
 	&& ln -sf /dev/stderr /var/log/apache2/error.log
+
+# Expose the port used by the remote control
+EXPOSE 8000
 	
 #################################################
 # Run the services

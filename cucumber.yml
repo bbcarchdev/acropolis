@@ -18,18 +18,16 @@ services:
     command: supervisord
 
   cucumber:
-    image: antonyh/cucumber
+    image: cucumber
+    build:
+      context: .
+      dockerfile: Dockerfile-cucumber
     depends_on:
-      - postgres
-      - fourstore
-      - s3
       - acropolis
     links:
-      - postgres
-      - fourstore
-      - s3
+      - acropolis
     volumes:
-      - ./docker/cucumber:/data
+      - ./cucumber:/data
 
   postgres:
     image: postgres:9.1

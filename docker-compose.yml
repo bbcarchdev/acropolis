@@ -2,7 +2,6 @@ version: '2'
 services:
   acropolis:
     privileged: true
-    container_name: acropolis
     image: acropolis
     build:
       context: .
@@ -22,7 +21,6 @@ services:
       - data:/data
 
   anansi:
-    container_name: anansi
     image: acropolis
     command: /usr/sbin/crawld -d -c /usr/etc/crawl.conf -f
     depends_on:
@@ -37,7 +35,6 @@ services:
       - acropolis
 
   twine-anansi:
-    container_name: twine-anansi
     image: acropolis
     command: /usr/sbin/twine-writerd -d -c /usr/etc/twine-anansi.conf -f
     depends_on:
@@ -52,7 +49,6 @@ services:
       - acropolis
       
   twine-spindle:
-    container_name: twine-spindle
     image: acropolis
     command: /usr/sbin/twine-writerd -d -c /usr/etc/twine.conf -f
     depends_on:
@@ -67,7 +63,6 @@ services:
       - acropolis
       
   twine-remote:
-    container_name: twine-remote
     image: acropolis
     command: /usr/bin/python3 /usr/local/src/docker/remote.py
     depends_on:
@@ -82,7 +77,6 @@ services:
       - acropolis
     
   quilt:
-    container_name: quilt
     image: acropolis
     command: /usr/sbin/apache2 -D FOREGROUND
     depends_on:

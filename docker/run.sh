@@ -38,5 +38,7 @@ if [ "${DOINIT}" = "true" ]; then
 	fi
 fi
 
+echo "$(date) - All good :-)"
+
 # Run the requested command
 exec "$@"
