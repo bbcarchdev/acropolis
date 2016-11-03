@@ -36,7 +36,6 @@ if [ "${DOINIT}" = "true" ]; then
 		# Print some doc
 		cat /usr/local/src/docker.md
 	fi
-else
 fi
 
 # Run the requested command
