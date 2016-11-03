@@ -35,7 +35,7 @@ services:
       - s3
     volumes_from:
       - acropolis
-      
+
   twine-anansi:
     container_name: twine-anansi
     image: acropolis
@@ -100,6 +100,8 @@ services:
     
   postgres:
     image: postgres:9.1
+    ports:
+      - 5432:5432
 
   fourstore:
     image: vm-10-100-0-25.ch.bbcarchdev.net/4store
@@ -109,4 +111,3 @@ services:
 
 volumes:
   data: {}
-    

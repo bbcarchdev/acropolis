@@ -70,7 +70,7 @@ RUN rm -f /usr/etc/twine.conf \
 	&& ln -s /usr/local/src/docker/quilt.conf /usr/etc/quilt.conf \
 	&& ln -s /usr/local/src/docker/twine.conf /usr/etc/twine.conf \
 	&& ln -s /usr/local/src/docker/twine-anansi.conf /usr/etc/twine-anansi.conf \
-	&& ln -s /usr/local/src/docker/acropolis-supervisord.conf /etc/supervisor/conf.d/acropolis.conf
+	&& ln -s /usr/local/src/docker/supervisord.conf /etc/supervisor/conf.d/acropolis.conf
 
 # Finish configuring Apache
 RUN cp /usr/share/doc/quilt/apache2-example.conf /etc/apache2/sites-available/quilt \
