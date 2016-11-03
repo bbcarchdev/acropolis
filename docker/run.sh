@@ -20,7 +20,7 @@ until nc -z fourstore 9000; do
 done
 
 # Wait until someone has initialised everything
-if [ "${DOINIT}" = "true" ]; then
+if [ "${DOINIT}" == "true" ]; then
 	if [ ! -f /ready ]; then
 		echo "$(date) - Create the DBs in Postgres..."
 		psql --host=postgres --username=postgres -c "CREATE DATABASE \"anansi\""
@@ -36,6 +36,20 @@ if [ "${DOINIT}" = "true" ]; then
 		# Print some doc
 		cat /usr/local/src/docker.md
 	fi
+else
+	# Check that the tables exist
+	until psql --host=postgres --username=postgres -lqt | cut -d \| -f 1 | grep -qw "anansi"; do
+		echo "$(date) - waiting for the table anansi"
+		sleep 1
+	done
+	until psql --host=postgres --username=postgres -lqt | cut -d \| -f 1 | grep -qw "spindle"; do
+		echo "$(date) - waiting for the table spindle"
+		sleep 1
+	done
+	until psql --host=postgres --username=postgres -lqt | cut -d \| -f 1 | grep -qw "cluster"; do
+		echo "$(date) - waiting for the table cluster"
+		sleep 1
+	done
 fi
 
 echo "$(date) - All good :-)"

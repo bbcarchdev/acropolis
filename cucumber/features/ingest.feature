@@ -1,5 +1,12 @@
 #encoding: utf-8
-Feature: Twine/Spindle collections and associated media
+Feature: Manually ingesting open data into Acropolis 
+
+	Besides the crawling process, system administrators should be able
+	to manually ingest data they have vetted as being openly licensed.
+	
+	Rules:
+		- The data must be externally validated as open data. No additional 
+		check will be performed as part of the ingest.
 
 Scenario: Number of proxies in the collection
 	When I count the amount of relevant entities that are ingested
