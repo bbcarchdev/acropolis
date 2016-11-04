@@ -7,6 +7,9 @@ from rdflib import Namespace
 rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 olo = Namespace("http://purl.org/ontology/olo/core#")
 
+acropolis_quilt = "http://acropolis.localhost:80"
+acropolis_twine_remote = "http://acropolis.localhost:8000/ingest"
+
 scenarios('audiences.feature')
 
 ingested = {}
@@ -28,8 +31,7 @@ def ingest(file):
     'Content-Type': 'text/x-nquads'
   }
   with open("data/" + file, 'r') as f: 
-    uri = 'http://twine:8000/ingest'
-    ingested[file] = requests.post(uri, headers=headers, data=f.read())
+    ingested[file] = requests.post(acropolis_twine_remote, headers=headers, data=f.read())
 
 
 @given("an audience <audience>")
@@ -43,7 +45,7 @@ def request_endpoint(context, endpoint):
   headers = {
     'Accept': 'application/json',
   }
-  uri = 'http://acropolis.localhost/{}{}'.format(endpoint, context['query'])
+  uri = '{}/{}{}'.format(acropolis_quilt, endpoint,  context['query'])
   context['uri'] = uri
   context['response'] = requests.get(uri, headers=headers)
 

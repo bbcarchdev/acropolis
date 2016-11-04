@@ -15,6 +15,9 @@ services:
       - postgres
       - fourstore
       - s3
+    expose:
+      - "80"
+      - "8000"
     command: supervisord
 
   pytest:
@@ -24,11 +27,10 @@ services:
       context: .
       dockerfile: Dockerfile-pytest
     depends_on:
-      - quilt
+      - acropolis
     links:
-      - quilt:acropolis.localhost
-      - twine-remote:twine
-      
+      - acropolis:acropolis.localhost
+
   postgres:
     image: postgres:9.1
     ports:

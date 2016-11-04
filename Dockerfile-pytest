@@ -6,6 +6,8 @@ ENV project acropolis_test
 RUN apt-get update && \
     apt-get -y install apt-utils
 
+RUN apt-get install -y --no-install-recommends git wget netcat netcat-traditional
+
 RUN apt-get -y install python-pip
 
 WORKDIR /${project}
@@ -15,3 +17,5 @@ ADD test/requirements.txt /${project}
 RUN pip install -r requirements.txt
 
 ADD test /${project}
+
+ENTRYPOINT ["./run.sh"]
