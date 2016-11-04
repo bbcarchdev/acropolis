@@ -22,7 +22,7 @@ services:
 
   anansi:
     image: acropolis
-    command: /usr/sbin/crawld -d -c /usr/etc/crawl.conf -f
+    command: /usr/sbin/crawld -c /usr/etc/crawl.conf -f
     depends_on:
       - postgres
       - fourstore
@@ -73,6 +73,8 @@ services:
       - postgres
       - fourstore
       - s3
+    ports:
+      - 8000:8000
     volumes_from:
       - acropolis
     
