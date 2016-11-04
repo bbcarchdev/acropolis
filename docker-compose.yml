@@ -47,7 +47,7 @@ services:
       - s3
     volumes_from:
       - acropolis
-      
+
   twine-spindle:
     image: acropolis
     command: /usr/sbin/twine-writerd -d -c /usr/etc/twine.conf -f
@@ -61,14 +61,13 @@ services:
       - s3
     volumes_from:
       - acropolis
-      
+
   twine-remote:
     image: acropolis
     command: /usr/bin/python3 /usr/local/src/docker/remote.py
     depends_on:
       - postgres
-      - fourstore
-      - s3
+      - twine-spindle
     links:
       - postgres
       - fourstore
@@ -77,10 +76,12 @@ services:
       - 8000:8000
     volumes_from:
       - acropolis
-    
+
   quilt:
     image: acropolis
     command: /usr/sbin/apache2 -D FOREGROUND
+    environment:
+      - HOST_NAME=acropolis.localhost
     depends_on:
       - postgres
       - fourstore
@@ -93,7 +94,7 @@ services:
       - 80:80
     volumes_from:
       - acropolis
-    
+
   postgres:
     image: postgres:9.1
     ports:
@@ -104,6 +105,18 @@ services:
 
   s3:
     image: vm-10-100-0-25.ch.bbcarchdev.net/s3
+
+  pytest:
+    container_name: pytest
+    command: pytest
+    build:
+      context: .
+      dockerfile: Dockerfile-pytest
+    depends_on:
+      - quilt
+    links:
+      - quilt:acropolis.localhost
+      - twine-remote:twine
 
 volumes:
   data: {}

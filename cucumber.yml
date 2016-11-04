@@ -31,7 +31,7 @@ services:
 
   postgres:
     image: postgres:9.1
-    
+
   fourstore:
     image: vm-10-100-0-25.ch.bbcarchdev.net/4store
 
