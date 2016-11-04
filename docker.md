@@ -20,17 +20,17 @@ container.
 
 ## Spindle processing engine (you can start multiple of those)
 ```
-/usr/sbin/twine-writerd -d -c /usr/etc/twine.conf -f
+/usr/sbin/twine-writerd -f
 ```
 
 ## Web crawler Anansi
 ```
-/usr/sbin/crawld -d -c /usr/etc/crawl.conf -f
+/usr/sbin/crawld -f
 ```
 
 ## Connection between Anansi and Spindle
 ```
-/usr/sbin/twine-writerd -d -c /usr/etc/twine-anansi.conf -f
+/usr/sbin/twine-writerd -c /usr/etc/twine-anansi.conf -f
 ```
 
 ## Linked Data frontend
@@ -48,14 +48,18 @@ container.
 ## Ingesting some data as a dump
 To ingest a NQuads dump do
 ```
-/usr/bin/twine -d -c /usr/etc/twine.conf dump.nq
+/usr/bin/twine shakespeare-sample.nq
 ```
-This bypass Anansi and schedule a payload ready to be processed by the 
+This bypasses Anansi and schedule a payload ready to be processed by the 
 processing engine Spindle (via the workflow engine Twine)
 
 ## Adding a URI to the queue
 ```
-/usr/bin/crawler-add -c /usr/etc/crawl.conf http://example.org
+/usr/bin/crawler-add http://dbpedia.org/resource/Cardiff
 ```
 
+## Adding an Nquad using the remote control
+```
+curl -X POST --header "Content-Type: text/x-nquads" --data-binary @shakespeare-sample.nq  http://localhost:8000/ingest
+```
 
