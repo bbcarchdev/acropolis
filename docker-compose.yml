@@ -106,17 +106,5 @@ services:
   s3:
     image: vm-10-100-0-25.ch.bbcarchdev.net/s3
 
-  pytest:
-    container_name: pytest
-    command: pytest
-    build:
-      context: .
-      dockerfile: Dockerfile-pytest
-    depends_on:
-      - quilt
-    links:
-      - quilt:acropolis.localhost
-      - twine-remote:twine
-
 volumes:
   data: {}
