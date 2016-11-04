@@ -6,12 +6,15 @@ MAINTAINER Christophe Gueret <christophe.gueret@bbc.co.uk>
 ENV DEBIAN_FRONTEND noninteractive
 ENV TERM xterm
 
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9E16A4D302DA096A && \
+	echo "deb [arch=amd64] http://apt.bbcarchdev.net/debian/ wheezy main ports live stage dev" \
+	>> /etc/apt/sources.list.d/bbcarchdev-wheezy.list
+	
 # Install additional tools for some debugging, running the remote, etc
 RUN apt-get -y update && apt-get install -y --no-install-recommends \
 	python3 python3-psycopg2 netcat netcat-traditional vim mc ngrep \
 	procps tcpdump gdb supervisor postgresql-client\
 	&& rm -rf /var/lib/apt/lists/*
-	
 	
 #################################################
 # Install Apache for running Quilt
