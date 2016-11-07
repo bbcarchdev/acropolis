@@ -12,6 +12,7 @@ docker-compose.yml
 *.pc
 .deps
 .libs
+.git
 Makefile.in
 Makefile
 autom4te.cache
