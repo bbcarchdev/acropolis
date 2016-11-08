@@ -29,8 +29,17 @@ if [ "${DOINIT}" == "true" ]; then
 		psql --host=postgres --username=postgres --dbname=spindle -c "CREATE EXTENSION \"hstore\""
 		
 		echo "$(date) -  Initialising Twine..."
+		# Use twine to migrate the schema for 'spindle'
 	    twine -d -c /usr/etc/twine.conf -S    
-	    
+
+		# Starting a writerd will take care of migrating 'cluster'
+		twine-writerd
+		until psql --host=postgres --username=postgres --dbname=cluster -c "SELECT \"version\" FROM \"_version\" WHERE \"ident\"='com.github.bbcarchdev.libcluster';" | grep "5"; do
+			echo "$(date) - waiting for the DB cluster schema version 5"
+			sleep 1
+		done
+		kill -s SIGTERM `pidof twine-writerd`
+			    
 		touch /ready
 		
 		# Print some doc
@@ -43,19 +52,23 @@ else
 		sleep 1
 	done
 
-	# Wait until DB cluster exists
-	until psql --host=postgres --username=postgres -lqt | cut -d \| -f 1 | grep -qw "cluster"; do
-		echo "$(date) - waiting for the DB cluster"
-		sleep 1
-	done
-
-	# Wait until Spindle exists and is upgraded
+	# Wait until Spindle exists and is at latest version
 	until psql --host=postgres --username=postgres -lqt | cut -d \| -f 1 | grep -qw "spindle"; do
 		echo "$(date) - waiting for the DB spindle"
 		sleep 1
 	done
 	until psql --host=postgres --username=postgres --dbname=spindle -c "SELECT \"version\" FROM \"_version\" WHERE \"ident\"='com.github.bbcarchdev.spindle.twine';" | grep "24"; do
 		echo "$(date) - waiting for the DB spindle schema version 24"
+		sleep 1
+	done
+
+	# Wait until DB cluster exists and is at latest version
+	until psql --host=postgres --username=postgres -lqt | cut -d \| -f 1 | grep -qw "cluster"; do
+		echo "$(date) - waiting for the DB cluster"
+		sleep 1
+	done
+	until psql --host=postgres --username=postgres --dbname=cluster -c "SELECT \"version\" FROM \"_version\" WHERE \"ident\"='com.github.bbcarchdev.libcluster';" | grep "5"; do
+		echo "$(date) - waiting for the DB cluster schema version 5"
 		sleep 1
 	done
 fi
