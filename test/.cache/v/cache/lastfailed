@@ -1,0 +1,7 @@
+{
+  "test_audiences.py::test_audiences_endpoint[bob.nq-everything-BoB National]": true,
+  "test_audiences.py::test_audiences_for[bob_shakespeare.nq-all-everything-6]": true,
+  "test_audiences.py::test_audiences_for[bob_shakespeare.nq-any-everything-12]": true,
+  "test_audiences.py::test_audiences_for[bob_shakespeare.nq-http://bobnational.net/#members-everything-8]": true,
+  "test_audiences.py::test_audiences_for[bob_shakespeare.nq-http://shakespeare.acropolis.org.uk/#members-everything-10]": true
+}

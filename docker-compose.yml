@@ -1,0 +1,121 @@
+version: '2'
+services:
+  # Base instance of Acropolis. Used here to init the DBs and show the doc
+  acropolis:
+    privileged: true
+    image: acropolis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DOINIT=true
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes:
+      - .:/usr/local/src
+      - data:/data
+
+  # The LOD crawler
+  anansi:
+    image: acropolis
+    command: /usr/sbin/crawld -c /usr/etc/crawl.conf -f
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+
+  # Connection between the crawler and the data processing service
+  twine-anansi:
+    image: acropolis
+    command: /usr/sbin/twine-writerd -d -c /usr/etc/twine-anansi.conf -f
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+
+  # Data processing
+  twine-spindle:
+    image: acropolis
+    command: /usr/sbin/twine-writerd -d -c /usr/etc/twine.conf -f
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    volumes_from:
+      - acropolis
+
+  # HTTP interface for interacting with the system
+  twine-remote:
+    image: acropolis
+    command: /usr/bin/python3 /usr/local/src/docker/remote.py
+    depends_on:
+      - postgres
+      - twine-spindle
+    links:
+      - postgres
+      - fourstore
+      - s3
+    ports:
+      - 8000:8000
+    volumes_from:
+      - acropolis
+
+  # LOD frontend
+  quilt:
+    image: acropolis
+    command: /usr/sbin/apache2 -D FOREGROUND
+    environment:
+      - HOST_NAME=acropolis.localhost
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    ports:
+      - 80:80
+    volumes_from:
+      - acropolis
+
+  # DB used to store the indexes
+  postgres:
+    image: postgres:9.1
+    ports:
+      - 5432:5432
+
+  # Tstore for the output of twine-anansi and the command line client twine
+  fourstore:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/4store
+
+  # S3 used to cache objects from Anansi and data processing output from Spindle
+  s3:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/s3
+
+# Data volume shared across all the services. Can be used as a persistent store
+# to save data (eg NQuads) across re-creation of the containers
+volumes:
+  data: {}

@@ -1,0 +1,9 @@
+<http://example.org/works/as_you_like_it#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/ontologies/work#Play> <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it#id> <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/As_You_Like_It> <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it#id> <http://purl.org/dc/terms/author> <http://dbpedia.org/resource/William_Shakespeare> <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it#id> <http://www.w3.org/2000/01/rdf-schema#label> "As You Like It"@en-GB <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it> <http://purl.org/dc/terms/license> <http://www.gnu.org/copyleft/fdl.html> <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it> <http://xmlns.com/foaf/0.1/primaryTopic> <http://example.org/works/as_you_like_it#id> <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it#id> <http://example.org/ontologies/work#publicationYear> "1599"^^<http://www.w3.org/2001/XMLSchema#gYear> <http://example.org/works/as_you_like_it#id> .
+<http://example.org/works/as_you_like_it#id> <http://example.org/ontologies/work#title> "As You Like It"@en-GB <http://example.org/works/as_you_like_it#id> .
