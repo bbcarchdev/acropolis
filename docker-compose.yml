@@ -109,7 +109,7 @@ services:
 
   # Tstore for the output of twine-anansi and the command line client twine
   fourstore:
-    image: vm-10-100-0-25.ch.bbcarchdev.net/4store
+    image: cgueret/4store
 
   # S3 used to cache objects from Anansi and data processing output from Spindle
   s3:
