@@ -113,7 +113,10 @@ services:
 
   # S3 used to cache objects from Anansi and data processing output from Spindle
   s3:
-    image: vm-10-100-0-25.ch.bbcarchdev.net/s3
+    image: lphoward/fake-s3
+    expose:
+      - 80
+    command: -r /fakes3_root -p 80
 
 # Data volume shared across all the services. Can be used as a persistent store
 # to save data (eg NQuads) across re-creation of the containers
