@@ -19,7 +19,7 @@ services:
       - s3
     volumes:
       - .:/usr/local/src
-      - data:/data
+      - ./test/data:/data
 
   # The LOD crawler
   anansi:
