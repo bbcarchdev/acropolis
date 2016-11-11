@@ -98,7 +98,7 @@ EXPOSE 8000
 #################################################
 
 # Set an entry script to wait until S3, Postgres and 4store are ready
-ADD docker /usr/local/src/
+COPY docker /usr/local/src/
 ENTRYPOINT ["/usr/local/src/docker/run.sh"]
 
 # Do nothing by default

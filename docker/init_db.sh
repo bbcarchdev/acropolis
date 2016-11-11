@@ -44,4 +44,5 @@ for db in anansi spindle cluster; do
   fi
 done
 
-exit 0
+# Run the requested command
+exec "$@"
