@@ -38,7 +38,6 @@ ENV APACHE_RUN_USER=www-data \
     APACHE_LOCK_DIR=/var/lock/apache2
 RUN a2enmod rewrite
 RUN a2enmod fcgid
-EXPOSE 80
 
 
 #################################################
@@ -59,8 +58,6 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
 
 # Copy the source tree
 COPY . /usr/local/src
-VOLUME ["/usr/local/src"]
-VOLUME ["/data"]
 
 # Compile everything
 RUN autoreconf -i \
@@ -90,16 +87,12 @@ RUN	ln -sf /dev/stdout /var/log/apache2/quilt.access.log \
 	&& ln -sf /dev/stderr /var/log/apache2/quilt.error.log \
 	&& ln -sf /dev/stderr /var/log/apache2/error.log
 
-# Expose the port used by the remote control
-EXPOSE 8000
-
 #################################################
 # Run the services
 #################################################
 
 # Set an entry script to wait until S3, Postgres and 4store are ready
 COPY docker /usr/local/src/
-ENTRYPOINT ["/usr/local/src/docker/run.sh"]
 
 # Do nothing by default
 CMD ["tail", "-f", "/dev/null"]
