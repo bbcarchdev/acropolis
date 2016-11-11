@@ -3,6 +3,8 @@ services:
   # Base instance of Acropolis. Used here to init the DBs and show the doc
   acropolis:
     privileged: true
+    entrypoint:
+      - ./docker/init_db.sh
     image: acropolis
     build:
       context: .
@@ -25,6 +27,8 @@ services:
   anansi:
     image: acropolis
     command: /usr/sbin/crawld -c /usr/etc/crawl.conf -f
+    entrypoint:
+      - ./docker/run.sh
     depends_on:
       - postgres
       - fourstore
@@ -40,6 +44,8 @@ services:
   twine-anansi:
     image: acropolis
     command: /usr/sbin/twine-writerd -d -c /usr/etc/twine-anansi.conf -f
+    entrypoint:
+      - ./docker/run.sh
     depends_on:
       - postgres
       - fourstore
@@ -55,6 +61,8 @@ services:
   twine-spindle:
     image: acropolis
     command: /usr/sbin/twine-writerd -d -c /usr/etc/twine.conf -f
+    entrypoint:
+      - ./docker/run.sh
     depends_on:
       - postgres
       - fourstore
@@ -70,6 +78,8 @@ services:
   twine-remote:
     image: acropolis
     command: /usr/bin/python3 /usr/local/src/docker/remote.py
+    entrypoint:
+      - ./docker/run.sh
     depends_on:
       - postgres
       - twine-spindle
@@ -86,6 +96,8 @@ services:
   quilt:
     image: acropolis
     command: /usr/sbin/apache2 -D FOREGROUND
+    entrypoint:
+      - ./docker/run.sh
     environment:
       - HOST_NAME=acropolis.localhost
     depends_on:
