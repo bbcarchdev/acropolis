@@ -5,7 +5,6 @@ services:
     privileged: true
     entrypoint:
       - ./docker/init_db.sh
-      - ./docker/run.sh
     image: acropolis
     build:
       context: .
