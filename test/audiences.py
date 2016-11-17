@@ -10,6 +10,7 @@ olo = Namespace("http://purl.org/ontology/olo/core#")
 audiences = [
   'http://bobnational.net/#members',
   'http://shakespeare.acropolis.org.uk/#members',
+  'http://bobnational.net/#members,http://shakespeare.acropolis.org.uk/#members',
   'any',
   'all',
 ]

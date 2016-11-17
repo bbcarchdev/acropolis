@@ -22,3 +22,15 @@ Scenario Outline: Audiences for
         | bob_shakespeare.nq | http://shakespeare.acropolis.org.uk/#members   | everything | 10 |
         | bob_shakespeare.nq | any                                            | everything | 12 |
         | bob_shakespeare.nq | all                                            | everything | 6 |
+
+Scenario Outline: Audiences for multiple params
+    Given some ingested test data <file>
+    Given an audience list <audiences>
+    When I request <endpoint>
+    Then I should have <slots> slots
+
+    Examples:
+        | file                | audiences                                                   | endpoint   | slots |
+        | bob_shakespeare.nq  | http://bobnational.net/#members                             | everything | 8 |
+        | bob_shakespeare.nq  | http://shakespeare.acropolis.org.uk/#members                | everything | 10 |
+        | bob_shakespeare.nq  | http://bobnational.net/#members,http://shakespeare.acropolis.org.uk/#members | everything | 10 |
