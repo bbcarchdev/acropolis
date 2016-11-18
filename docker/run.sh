@@ -1,40 +1,25 @@
 #!/bin/bash
 set -e
 
-db_host=postgres
-db_user=postgres
+# Load the functions
+source ./docker/functions.sh
 
 # Wait for Postgres
-until nc -z postgres 5432; do
-    echo "$(date) - waiting for Postgres..."
-    sleep 2
-done
+wait_for_service postgres 5432
 
 # Check individual databases are initialised
-for db in anansi spindle cluster; do
-  if psql --host=${db_host} --username=${db_user} --dbname=${db} -tAc '';then
-    echo Database ${db} Exists
-    sleep 5
-  else
-    echo "$(date) - waiting for database ${db} to be initialised"
-    sleep 2
-  fi
-done
-
+wait_for_schema spindle com.github.bbcarchdev.spindle.twine 24
+wait_for_schema anansi com.github.nevali.crawl.db 7
+wait_for_schema cluster com.github.bbcarchdev.libcluster 5
 
 # Wait for S3
-until nc -z s3 80; do
-    echo "$(date) - waiting for S3..."
-    sleep 2
-done
+wait_for_service s3 80
 
 # Wait for 4Store
-until nc -z fourstore 9000; do
-    echo "$(date) - waiting for 4Store..."
-    sleep 2
-done
+wait_for_service fourstore 9000
 
-echo "$(date) - Services Ready.."
+# Ready!
+echo "$(date) - services ready.."
 
 # Run the requested command
 exec "$@"

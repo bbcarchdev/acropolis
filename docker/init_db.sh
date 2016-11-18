@@ -1,48 +1,48 @@
 #!/bin/bash
 set -e
 
-db_host=postgres
-db_user=postgres
+# Load the functions
+source ./docker/functions.sh
 
 # Wait for Postgres
-until nc -z postgres 5432; do
-    echo "$(date) - waiting for Postgres..."
-    sleep 2
-done
+wait_for_service postgres 5432
 
+# Create the DB. They need to be all there before the init is triggered.
+do_init=false
 for db in anansi spindle cluster; do
-  if psql --host=${db_host} --username=${db_user} --dbname=${db} -tAc '';then
-    echo Database ${db} Exists
-  else
-    echo Creating Database ${db}
-    psql --host=${db_host} --username=${db_user} -c "CREATE DATABASE \"${db}\""
-
-    if [ "$db" == "spindle" ]; then
-      echo Create hstore extension
-      psql --host=${db_host} --username=${db_user} --dbname=${db} -c "CREATE EXTENSION \"hstore\""
-
-      echo "Initialising Twine spindle (via twine)"
-      # Use twine to migrate the schema for 'spindle'
-      twine -d -c /usr/etc/twine.conf -S
-
-      until psql --host=${db_host} --username=${db_user} --dbname=${db} -c "SELECT \"version\" FROM \"_version\" WHERE \"ident\"='com.github.bbcarchdev.spindle.twine';" | grep "24"; do
-        echo "$(date) -waiting for the DB spindle schema version 24"
-        sleep 1
-      done
-    fi
-
-    if [ "$db" == "cluster" ]; then
-      # Starting a writerd will take care of migrating 'cluster'
-      echo "Initialising cluster (via twine-writerd)"
-      twine-writerd
-      until psql --host=${db_host} --username=${db_user} --dbname=${db} -c "SELECT \"version\" FROM \"_version\" WHERE \"ident\"='com.github.bbcarchdev.libcluster';" | grep "5"; do
-        echo "$(date) - waiting for the DB cluster schema version 5"
-        sleep 1
-      done
-      kill -s SIGTERM `pidof twine-writerd`
-    fi
-  fi
+	if db_exists ${db}; then
+    	echo "$(date) - database ${db} exists"
+	else
+		echo "$(date) - creating database ${db}"
+		create_db ${db};
+		do_init=true
+	fi
 done
+
+# Do all the init if needed
+if [ "${do_init}" = true ] ; then
+	echo "$(date) - need to initialise one or more databases"
+
+	# Use twine to migrate the schema for 'spindle'
+	echo "$(date) - doing schema migration with Twine"
+	twine -c /usr/etc/twine.conf -S >/dev/null 2>&1
+	wait_for_schema spindle com.github.bbcarchdev.spindle.twine 24
+
+	# Use twine to migrate the schema for 'spindle'
+	echo "$(date) - doing schema migration with Anansi"
+	/usr/sbin/crawld -c /usr/etc/crawl.conf -S >/dev/null 2>&1
+	wait_for_schema anansi com.github.nevali.crawl.db 7
+	
+	# Use twine-writerd to migrate the schema of cluster
+	echo "$(date) - spawning a writerd to init the cluster"
+	twine-writerd >/dev/null 2>&1
+	wait_for_schema cluster com.github.bbcarchdev.libcluster 5
+	kill -s SIGTERM `pidof twine-writerd`
+
+
+	# Probably a first run so we print the doc too
+	cat docker.md
+fi
 
 # Run the requested command
 exec "$@"
