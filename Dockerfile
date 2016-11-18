@@ -60,7 +60,7 @@ RUN apt-get -y update && apt-get install -y --no-install-recommends \
 COPY . /usr/local/src
 
 # Compile everything
-RUN autoreconf -i \
+RUN autoreconf -i --force \
 	&& ./configure --prefix=/usr --enable-debug --disable-docs \
 	&& make clean \
 	&& make \
