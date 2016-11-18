@@ -97,7 +97,7 @@ services:
     entrypoint:
       - ./docker/run.sh
     environment:
-      - HOST_NAME=acropolis.localhost
+      - HOST_NAME=localhost
     depends_on:
       - postgres
       - fourstore
