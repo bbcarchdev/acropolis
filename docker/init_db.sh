@@ -37,8 +37,13 @@ if [ "${do_init}" = true ] ; then
 	echo "$(date) - spawning a writerd to init the cluster"
 	twine-writerd >/dev/null 2>&1
 	wait_for_schema cluster com.github.bbcarchdev.libcluster 5
+	
+	# Ask the writerd to stop and wait until its process is gone
 	kill -s SIGTERM `pidof twine-writerd`
-
+	until [[ -z `pidof twine-writerd` ]]; do
+	    echo "$(date) - wait for writerd to finish"
+	    sleep 2
+	done
 
 	# Probably a first run so we print the doc too
 	cat docker.md

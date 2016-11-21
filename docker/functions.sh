@@ -29,10 +29,10 @@ function wait_for_schema () {
 	echo "$(date) - waiting for the schema version $3 for $1"
 	until db_exists $1; do
 		echo "$(date) - waiting for the DB $1"
-		sleep 1
+		sleep 2
 	done
 	until psql --host=${db_host} --username=${db_user} --dbname=$1 -q -c "SELECT \"version\" FROM \"_version\" WHERE \"ident\"='$2';" | grep "$3" >/dev/null 2>&1; do
 		echo "$(date) - waiting for the schema version $3 for $1"
-		sleep 1
+		sleep 2
 	done	
 }
