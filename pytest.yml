@@ -2,11 +2,12 @@ version: '2'
 services:
   acropolis:
     image: acropolis
+    entrypoint:
+      - ./docker/init_db.sh
+    command: supervisord
     build:
       context: .
       dockerfile: Dockerfile
-    environment:
-      - DOINIT=true
     depends_on:
       - postgres
       - fourstore
@@ -15,10 +16,12 @@ services:
       - postgres
       - fourstore
       - s3
-    command: supervisord
     ports:
       - 80:80
       - 8000:8000
+    volumes:
+      - .:/usr/local/src
+      - ./test/data:/data
 
   pytest:
     container_name: pytest

@@ -1,5 +1,6 @@
 Dockerfile
 docker-compose.yml
+/docker
 *.lo
 *.o
 *.la

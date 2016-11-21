@@ -40,6 +40,12 @@ def for_audience(context, audience):
   print(context['query'])
 
 
+@given("an audience list <audiences>")
+def for_audience(context, audiences):
+  context['query'] = "?for={}".format(urllib.parse.quote(audiences))
+  print(context['query'])
+
+
 @when("I request <endpoint>")
 def request_endpoint(context, endpoint):
   headers = {
