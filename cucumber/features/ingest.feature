@@ -1,11 +1,11 @@
 #encoding: utf-8
-Feature: Manually ingesting open data into Acropolis 
+Feature: Manually ingesting open data into Acropolis
 
 	Besides the crawling process, system administrators should be able
 	to manually ingest data they have vetted as being openly licensed.
-	
+
 	Rules:
-		- The data must be externally validated as open data. No additional 
+		- The data must be externally validated as open data. No additional
 		check will be performed as part of the ingest.
 
 Scenario: Number of proxies in the collection

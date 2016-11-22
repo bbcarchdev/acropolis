@@ -19,7 +19,7 @@ for audience in audiences:
   headers = {
     'Accept': 'application/json',
   }
-  local_uri = 'http://localhost/everything?for={}'.format(urllib.parse.quote(audience))
+  local_uri = 'http://acropolis.localhost/everything?for={}'.format(urllib.parse.quote(audience))
   uri = 'http://acropolis.localhost/everything?for={}'.format(urllib.parse.quote(audience))
   r = requests.get(local_uri, headers=headers)
 
@@ -30,6 +30,8 @@ for audience in audiences:
 
   print("-" * 80)
   print(uri)
+  for key in o:
+    print("Key {}".format(key))
   slots = o[uri].get(str(olo.slot),[])
   print("Slots: {}".format(len(slots)))
   for slot in slots:

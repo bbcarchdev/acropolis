@@ -27,7 +27,7 @@ When(/^"([^"]*)" is ingested into Twine$/) do |file|
 end
 
 When(/^I count the amount of relevant entities that are ingested$/) do
-        @entities = count("http://localhost/everything.nt")
+        @entities = count("http://acropolis.localhost/everything.nt")
         puts "(#{@entities} entities found)"
 end
 
@@ -36,14 +36,14 @@ When(/^A proxy exists for "([^"]*)"$/) do |uri|
 end
 
 Then(/^The number of relevant entities in the collection should be the same$/) do
-        n = count("http://localhost/#{@proxy}.nt")
+        n = count("http://acropolis.localhost/#{@proxy}.nt")
         expect(n).to eq(@entities)
 end
 
 When(/^The proxy is associated with "([^"]*)"'s proxy$/) do |uri|
         subj_proxy = uri(uri)
-        graph = RDF::Graph.load("http://localhost/#{subj_proxy}")
-        subj = RDF::URI.new("http://localhost/#{subj_proxy}#id")
+        graph = RDF::Graph.load("http://acropolis.localhost/#{subj_proxy}")
+        subj = RDF::URI.new("http://acropolis.localhost/#{subj_proxy}#id")
         pred = RDF::URI.new("http://purl.org/ontology/olo/core#slot")
 
         found = false
@@ -58,8 +58,8 @@ end
 
 When(/^The proxy is listed in the graph of "([^"]*)"'s proxy$/) do |uri|
         subj_proxy = uri(uri)
-        graph = RDF::Graph.load("http://localhost/#{subj_proxy}")
-        subj = RDF::URI.new("http://localhost/#{@proxy}#id")
+        graph = RDF::Graph.load("http://acropolis.localhost/#{subj_proxy}")
+        subj = RDF::URI.new("http://acropolis.localhost/#{@proxy}#id")
 
         found = false
         graph.query([subj, nil, nil]) do |st|
@@ -71,11 +71,11 @@ end
 
 When(/^I search for media for "([^"]*)"$/) do |audience|
         params = { "for" => audience }
-        @entities = results("http://localhost/", params)
+        @entities = results("http://acropolis.localhost/", params)
         puts "(#{@entities.count} results found)"
 end
 
 Then(/^The proxy is listed in the search results$/) do
-  proxyURI = subj = RDF::URI.new("http://localhost/#{@proxy}#id")
+  proxyURI = subj = RDF::URI.new("http://acropolis.localhost/#{@proxy}#id")
   expect(@entities).to include(proxyURI)
 end

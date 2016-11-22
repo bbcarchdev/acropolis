@@ -30,7 +30,7 @@ def count(uri, offset=0, limit=100)
 end
 
 def uri(c_uri)
-        uri = URI("http://localhost/")
+        uri = URI("http://acropolis.localhost/")
         params = { :uri => c_uri }
         uri.query = URI.encode_www_form(params)
         response = Net::HTTP.get_response(uri)
@@ -43,17 +43,17 @@ def results(uri, params)
         # Define the query and execute it
         query = URI.encode_www_form(params)
         graph = RDF::Graph.load("#{uri}?#{query}")
-        
+
         # Look for the English translation of this query and print it
         title_query = RDF::Query.new(
-        RDF::URI.new("http://localhost/?#{query}") => {
+        RDF::URI.new("http://acropolis.localhost/?#{query}") => {
                 RDF.type => RDF::URI.new("http://rdfs.org/ns/void#Dataset"),
                 RDF::URI.new("http://www.w3.org/2000/01/rdf-schema#label") => :label
         })
         title_query.execute(graph).each do |entry|
                 puts entry.label
         end
-        
+
         # Process the results of the query
         results = Array.new
         slots_query = RDF::Query.new(
@@ -65,7 +65,7 @@ def results(uri, params)
         slots_query.execute(graph).each do |entry|
                 results.insert(entry.index, entry.item)
         end
-        
+
         # Remove any eventual nil value before and return the array
         return results.compact
 end

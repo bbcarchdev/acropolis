@@ -54,4 +54,8 @@ The following assumes you built and installed the stack
 You must have Docker and docker-compose installed. To run the stack do:
 
     $ docker-compose up
-       
+
+## Running Tests in Docker
+
+    $ docker-compose -f pytest.yml run pytest
+    $ docker-compose -f cucumber.yml run cucumber

@@ -16,9 +16,6 @@ services:
       - postgres
       - fourstore
       - s3
-    ports:
-      - 80:80
-      - 8000:8000
     volumes:
       - .:/usr/local/src
       - ./test/data:/data
@@ -32,7 +29,7 @@ services:
     depends_on:
       - acropolis
     links:
-      - acropolis
+      - acropolis:acropolis.localhost
 
   postgres:
     image: postgres:9.1
