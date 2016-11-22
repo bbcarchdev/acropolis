@@ -7,8 +7,8 @@ from rdflib import Namespace
 rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 olo = Namespace("http://purl.org/ontology/olo/core#")
 
-acropolis_quilt = "http://acropolis.localhost:80"
-acropolis_twine_remote = "http://acropolis.localhost:8000/ingest"
+acropolis_quilt = "http://acropolis:80"
+acropolis_twine_remote = "http://acropolis:8000/ingest"
 
 scenarios('audiences.feature')
 

@@ -32,7 +32,7 @@ services:
     depends_on:
       - acropolis
     links:
-      - acropolis:acropolis.localhost
+      - acropolis
 
   postgres:
     image: postgres:9.1
