@@ -2,8 +2,9 @@ version: '2'
 services:
   acropolis:
     image: acropolis
+    container_name: acropolis
     entrypoint:
-      - ./docker/init_db.sh
+      - docker/init_db.sh
     command: supervisord
     build:
       context: .
