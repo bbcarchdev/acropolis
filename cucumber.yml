@@ -1,0 +1,39 @@
+version: '2'
+services:
+  acropolis:
+    image: acropolis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DOINIT=true
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    command: supervisord
+
+  cucumber:
+    image: cucumber
+    build:
+      context: .
+      dockerfile: Dockerfile-cucumber
+    depends_on:
+      - acropolis
+    links:
+      - acropolis:acropolis.localhost
+    volumes:
+      - ./cucumber:/data
+
+  postgres:
+    image: postgres:9.1
+
+  fourstore:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/4store
+
+  s3:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/s3

@@ -1,11 +1,25 @@
 #!/bin/bash
+set -e
 
-# Wait until we can remote control Twine
-until nc -z twine 8000; do
-    echo "$(date) - waiting for Twine remote control..."
-    sleep 2
-done
-echo "The remote control seems to be up"
+# Load the functions
+source ./docker/functions.sh
+
+# Wait for Postgres
+wait_for_service postgres 5432
+
+# Check individual databases are initialised
+wait_for_schema spindle com.github.bbcarchdev.spindle.twine 24
+wait_for_schema anansi com.github.nevali.crawl.db 7
+wait_for_schema cluster com.github.bbcarchdev.libcluster 5
+
+# Wait for S3
+wait_for_service s3 80
+
+# Wait for 4Store
+wait_for_service fourstore 9000
+
+# Ready!
+echo "$(date) - services ready.."
 
 # Run the requested command
 exec "$@"

@@ -1,0 +1,44 @@
+version: '2'
+services:
+  acropolis:
+    image: acropolis
+    container_name: acropolis
+    entrypoint:
+      - docker/init_db.sh
+    command: supervisord
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+      - fourstore
+      - s3
+    links:
+      - postgres
+      - fourstore
+      - s3
+    expose:
+     - "80"
+     - "8000"
+
+  pytest:
+    container_name: pytest
+    command: pytest
+    build:
+      context: .
+      dockerfile: Dockerfile-pytest
+    depends_on:
+      - acropolis
+    links:
+      - acropolis:acropolis.localhost
+
+  postgres:
+    image: postgres:9.1
+    ports:
+      - 5432:5432
+
+  fourstore:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/4store
+
+  s3:
+    image: vm-10-100-0-25.ch.bbcarchdev.net/s3
