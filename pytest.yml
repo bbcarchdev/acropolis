@@ -17,6 +17,9 @@ services:
       - postgres
       - fourstore
       - s3
+    expose:
+     - "80"
+     - "8000"
 
   pytest:
     container_name: pytest
