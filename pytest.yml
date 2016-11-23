@@ -17,9 +17,6 @@ services:
       - postgres
       - fourstore
       - s3
-    volumes:
-      - .:/usr/local/src
-      - ./test/data:/data
 
   pytest:
     container_name: pytest
