@@ -1,0 +1,39 @@
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#nearbyFeatures> <http://sws.geonames.org/7627289/nearby.rdf> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "Sen\u0173j\u0173 meistr\u0173 paveiksl\u0173 galerija"@lt <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#countryCode> "DE" <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#parentFeature> <http://sws.geonames.org/6551127/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://sws.geonames.org/7627289/about.rdf> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/about.rdf> <http://xmlns.com/foaf/0.1/primaryTopic> <http://sws.geonames.org/7627289/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/about.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0534\u0580\u0565\u0566\u0564\u0565\u0576\u056B \u057A\u0561\u057F\u056F\u0565\u0580\u0561\u057D\u0580\u0561\u0570"@hy <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#parentADM4> <http://sws.geonames.org/6551127/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0414\u0440\u0435\u0437\u0434\u0435\u043D \u0441\u0443\u0440\u0435\u0442 \u0433\u0430\u043B\u0435\u0440\u0435\u044F\u0441\u044B"@kk <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0413\u0430\u043B\u0435\u0440\u0435\u044F \u0441\u0442\u0430\u0440\u0438\u0445 \u043C\u0430\u0439\u0441\u0442\u0440\u0456\u0432"@uk <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.geonames.org/ontology#Feature> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/about.rdf> <http://creativecommons.org/ns#attributionName> "GeoNames"^^<http://www.w3.org/2001/XMLSchema#string> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#parentADM3> <http://sws.geonames.org/2935020/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "13.73459" <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0413\u0430\u043B\u0435\u0440\u0438\u0458\u0430 \u043D\u0430 \u0441\u0442\u0430\u0440\u0438\u0442\u0435 \u043C\u0430\u0458\u0441\u0442\u043E\u0440\u0438"@mk <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/about.rdf> <http://purl.org/dc/terms/created> "2010-12-25"^^<http://www.w3.org/2001/XMLSchema#date> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#featureCode> <http://www.geonames.org/ontology#S.MUS> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "Pinacoteca dos Mestres Antigos"@pt <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0413\u0430\u043B\u0435\u0440\u0438\u0458\u0430 \u0441\u0442\u0430\u0440\u0438\u0445 \u043C\u0430\u0458\u0441\u0442\u043E\u0440\u0430 \u0443 \u0414\u0440\u0435\u0437\u0434\u0435\u043D\u0443"@sr <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#wikipediaArticle> <http://en.wikipedia.org/wiki/Gem%C3%A4ldegalerie_Alte_Meister> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "Galeria Obraz\u00F3w Starych Mistrz\u00F3w w Dre\u017Anie"@pl <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#name> "Gem\u00E4ldegalerie Alte Meister" <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0E40\u0E01\u0E40\u0E21\u0E25\u0E40\u0E14\u0E01\u0E32\u0E40\u0E25\u0E23\u0E35\u0E2D\u0E31\u0E25\u0E40\u0E17\u0E2D\u0E44\u0E21\u0E2A\u0E40\u0E17\u0E2D\u0E23\u0E4C"@th <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/about.rdf> <http://purl.org/dc/terms/modified> "2015-09-05"^^<http://www.w3.org/2001/XMLSchema#date> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#parentCountry> <http://sws.geonames.org/2921044/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u05DE\u05D5\u05D6\u05D9\u05D0\u05D5\u05DF \u05D4\u05E6\u05D9\u05D9\u05E8\u05D9\u05DD \u05D4\u05D2\u05D3\u05D5\u05DC\u05D9\u05DD"@he <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0413\u0430\u043B\u0435\u0440\u044D\u044F \u0441\u0442\u0430\u0440\u044B\u0445 \u043C\u0430\u0439\u0441\u0442\u0440\u043E\u045E"@be <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "51.05378" <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/about.rdf> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u30A2\u30EB\u30C6\u30FB\u30DE\u30A4\u30B9\u30BF\u30FC\u7D75\u753B\u9928"@ja <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/about.rdf> <http://creativecommons.org/ns#attributionURL> <http://sws.geonames.org/7627289/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#featureClass> <http://www.geonames.org/ontology#S> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#locationMap> <http://www.geonames.org/7627289/gemaeldegalerie-alte-meister.html> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u062F\u0631\u0633\u062F\u0646 \u0642\u0644\u0639\u0647"@mzn <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u5386\u4EE3\u5927\u5E08\u753B\u5ECA"@zh <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#alternateName> "\u0413\u0430\u043B\u0435\u0440\u0435\u044F \u0441\u0442\u0430\u0440\u044B\u0445 \u043C\u0430\u0441\u0442\u0435\u0440\u043E\u0432"@ru <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.geonames.org/ontology#parentADM1> <http://sws.geonames.org/2842566/> <http://sws.geonames.org/7627289/about.rdf> .
+<http://sws.geonames.org/7627289/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Gem%C3%A4ldegalerie_Alte_Meister> <http://sws.geonames.org/7627289/about.rdf> .
