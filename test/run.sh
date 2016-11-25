@@ -2,7 +2,7 @@
 set -e
 
 echo Waiting for services...
-count=6
+count=10
 until nc -z acropolis.localhost 80; do
     echo "$(date) - (${count}) waiting for quilt..."
 		count=$((count-1))
@@ -13,7 +13,7 @@ until nc -z acropolis.localhost 80; do
     sleep 5
 done
 
-count=6
+count=10
 until nc -z acropolis.localhost 8000; do
     echo "$(date) - (${count}) waiting for twine-remote..."
 		count=$((count-1))
