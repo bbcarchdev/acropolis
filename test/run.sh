@@ -2,27 +2,26 @@
 set -e
 
 echo Waiting for services...
-count=0
-tries=6
+count=6
 until nc -z acropolis.localhost 80; do
-    echo "$(date) - waiting for quilt..."
-    sleep 5
-		((count++))
-		if [ "$count" -eq "$tries" ]; then
+    echo "$(date) - (${count}) waiting for quilt..."
+		count=$((count-1))
+		if [ "$count" -eq "0" ]; then
 			echo Timeout
 			exit 1;
 		fi
+    sleep 5
 done
 
-count=0
+count=6
 until nc -z acropolis.localhost 8000; do
-    echo "$(date) - waiting for twine-remote..."
-    sleep 5
-		((count++))
-		if [ "$count" -eq "$tries" ]; then
+    echo "$(date) - (${count}) waiting for twine-remote..."
+		count=$((count-1))
+		if [ "$count" -eq "0" ]; then
 			echo Timeout
 			exit 1;
 		fi
+    sleep 5
 done
 echo Up!
 
