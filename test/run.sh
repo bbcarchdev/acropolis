@@ -4,7 +4,7 @@ set -e
 echo Waiting for services...
 count=0
 tries=6
-until nc -z acroppolis.localhost 80; do
+until nc -z acropolis.localhost 80; do
     echo "$(date) - waiting for quilt..."
     sleep 5
 		((count++))
