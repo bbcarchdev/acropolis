@@ -25,7 +25,7 @@ services:
     depends_on:
       - acropolis
     links:
-      - acropolis
+      - acropolis:acropolis.localhost
     volumes:
       - ./cucumber:/data
 

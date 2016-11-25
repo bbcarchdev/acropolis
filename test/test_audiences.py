@@ -7,7 +7,7 @@ from rdflib import Namespace
 rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 olo = Namespace("http://purl.org/ontology/olo/core#")
 
-acropolis_quilt = "http://acropolis:80"
+acropolis_quilt = "http://acropolis.localhost"
 acropolis_twine_remote = "http://acropolis:8000/ingest"
 
 scenarios('audiences.feature')
@@ -41,8 +41,14 @@ def for_audience(context, audience):
 
 
 @given("an audience list <audiences>")
-def for_audience(context, audiences):
-  context['query'] = "?for={}".format(urllib.parse.quote(audiences))
+def for_audience_list(context, audiences):
+  context['query'] = ""
+  for audience in audiences.split(','):
+    if context['query']:
+      context['query'] = context['query'] + "&"
+    else:
+      context['query'] = context['query'] + "?"
+    context['query'] = context['query'] + "for={}".format(urllib.parse.quote(audience))
   print(context['query'])
 
 

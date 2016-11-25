@@ -32,12 +32,12 @@ if [ "${do_init}" = true ] ; then
 	echo "$(date) - doing schema migration with Anansi"
 	/usr/sbin/crawld -c /usr/etc/crawl.conf -S >/dev/null 2>&1
 	wait_for_schema anansi com.github.nevali.crawl.db 7
-	
+
 	# Use twine-writerd to migrate the schema of cluster
 	echo "$(date) - spawning a writerd to init the cluster"
 	twine-writerd >/dev/null 2>&1
 	wait_for_schema cluster com.github.bbcarchdev.libcluster 5
-	
+
 	# Ask the writerd to stop and wait until its process is gone
 	kill -s SIGTERM `pidof twine-writerd`
 	until [[ -z `pidof twine-writerd` ]]; do

@@ -2,8 +2,9 @@ version: '2'
 services:
   acropolis:
     image: acropolis
+    container_name: acropolis
     entrypoint:
-      - ./docker/init_db.sh
+      - docker/init_db.sh
     command: supervisord
     build:
       context: .
@@ -16,12 +17,9 @@ services:
       - postgres
       - fourstore
       - s3
-    ports:
-      - 80:80
-      - 8000:8000
-    volumes:
-      - .:/usr/local/src
-      - ./test/data:/data
+    expose:
+     - "80"
+     - "8000"
 
   pytest:
     container_name: pytest
@@ -32,7 +30,7 @@ services:
     depends_on:
       - acropolis
     links:
-      - acropolis
+      - acropolis:acropolis.localhost
 
   postgres:
     image: postgres:9.1
