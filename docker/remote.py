@@ -21,7 +21,6 @@ logging.basicConfig(level=logging.DEBUG)
 import select
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
-import time
 
 DSN = 'host=postgres dbname=spindle user=postgres password=postgres'
 
@@ -101,7 +100,6 @@ class Handler(BaseHTTPRequestHandler):
         curs.execute("LISTEN ingest")
 
         logging.debug("Waiting for ingest done notification")
-				time.sleep(10)
         while 1:
             if select.select([self.server.db],[],[])!=([],[],[]):
                 self.server.db.poll()
