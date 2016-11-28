@@ -10,4 +10,4 @@ Scenario Outline: Media search
 
     Examples:
         | file                | query   | media                                  | endpoint  | uri |
-        | dracula.nq          | Dracula | http://purl.org/dc/dcmitype/StillImage |           | http://acropolis.org.uk/index.html?media=http://purl.org/dc/dcmitype/StillImage&q=Dracula |
+        | dracula.nq          | Dracula | http://purl.org/dc/dcmitype/StillImage |           | http://acropolis.localhost/?q=Dracula&media=http%3A//purl.org/dc/dcmitype/StillImage |
