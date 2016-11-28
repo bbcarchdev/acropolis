@@ -41,8 +41,8 @@ for audiences in audiences_list:
 
   print("-" * 80)
   print(uri)
-#  for key in o:
-#    print("Key {}".format(key))
+  for key in o:
+    print("Key {}".format(key))
   slots = o[uri].get(str(olo.slot),[])
   print("Slots: {}".format(len(slots)))
   for slot in slots:

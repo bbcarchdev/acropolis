@@ -20,11 +20,11 @@ Scenario Outline: Audiences for
 
     Examples:
         | file   | audience                                                   | endpoint  | slots |
-        | bob_shakespeare.nq | http://bobnational.net/#members                | assets    | 4 |
-        | bob_shakespeare.nq | http://shakespeare.acropolis.org.uk/#members   | assets    | 2 |
-        | bob_shakespeare.nq | any                                            | assets    | 4 |
-        | bob_shakespeare.nq | all                                            | assets    | 2 |
-        | bob_shakespeare.nq | any                                            | everything | 12 |
+        | bob_shakespeare.nq | http://bobnational.net/#members                | assets    | 7 |
+        | bob_shakespeare.nq | http://shakespeare.acropolis.org.uk/#members   | assets    | 5 |
+        | bob_shakespeare.nq | any                                            | assets    | 7 |
+        | bob_shakespeare.nq | all                                            | assets    | 5 |
+        | bob_shakespeare.nq | any                                            | everything | 16 |
 
 
 Scenario Outline: Audiences for multiple params
@@ -35,6 +35,6 @@ Scenario Outline: Audiences for multiple params
 
     Examples:
         | file                | audiences                                                                     | endpoint  | slots |
-        | bob_shakespeare.nq  | http://bobnational.net/#members                                               | assets    | 4 |
-        | bob_shakespeare.nq  | http://shakespeare.acropolis.org.uk/#members                                  | assets    | 2 |
-        | bob_shakespeare.nq  | http://bobnational.net/#members,http://shakespeare.acropolis.org.uk/#members  | assets    | 4 |
+        | bob_shakespeare.nq  | http://bobnational.net/#members                                               | assets    | 7 |
+        | bob_shakespeare.nq  | http://shakespeare.acropolis.org.uk/#members                                  | assets    | 5 |
+        | bob_shakespeare.nq  | http://bobnational.net/#members,http://shakespeare.acropolis.org.uk/#members  | assets    | 7 |

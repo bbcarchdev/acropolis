@@ -1,0 +1,24 @@
+<http://dracula.gothic/images/drac.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/StillImage> <http://dracula.gothic/images/drac.jpg> .
+<http://dracula.gothic/images/drac.jpg> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/image/jpeg> <http://dracula.gothic/images/drac.jpg> .
+<http://dracula.gothic/images/drac.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Image> <http://dracula.gothic/images/drac.jpg> .
+<http://dracula.gothic/images/drac.jpg> <http://purl.org/dc/terms/license> <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://dracula.gothic/images/drac.jpg> .
+<http://dracula.gothic/images/drac.jpg> <http://xmlns.com/foaf/0.1/depicts> <http://dracula.gothic/people/dracula#id> <http://dracula.gothic/images/drac.jpg> .
+<http://dracula.gothic/images/drac.jpg> <http://www.w3.org/2000/01/rdf-schema#label> "Photograph of Count Dracula"@en-gb <http://dracula.gothic/images/drac.jpg> .
+<http://dracula.gothic/people/dracula#id> <http://www.w3.org/2000/01/rdf-schema#label> "Count Dracula"@en-gb <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula> <http://www.w3.org/2000/01/rdf-schema#label> "Description of 'Count Dracula'"@en-gb <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula#id> <http://purl.org/dc/terms/description> "Lord of the Undead and all-round evil guy."@en-gb <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dracula.gothic/people/dracula#id> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula> <http://purl.org/dc/terms/license> <https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula#id> <http://rdfs.org/ns/void#inDataset> <http://dracula.gothic/people#dataset> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula#id> <http://search.yahoo.com/mrss/content> <http://dracula.gothic/images/drac.jpg> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula#id> <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Vlad_Dracula> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula> <http://purl.org/dc/terms/hasFormat> <http://dracula.gothic/people/dracula.ttl> <http://dracula.gothic/people/dracula> .
+<http://dracula.gothic/people/dracula.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://dracula.gothic/people/dracula.ttl> .
+<http://dracula.gothic/people/dracula.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://dracula.gothic/people/dracula.ttl> .
+<http://dracula.gothic/people/dracula.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://dracula.gothic/people/dracula.ttl> .
+<http://dracula.gothic/people/dracula.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://dracula.gothic/people/dracula.ttl> .
+<http://dracula.gothic/people/dracula.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Description of 'Count Dracula' as Turtle"@en <http://dracula.gothic/people/dracula.ttl> .
+
+
