@@ -20,9 +20,6 @@ services:
     expose:
      - "80"
      - "8000"
-    ports:
-     - "80:80"
-     - "8000:8000"
 
   pytest:
     container_name: pytest
