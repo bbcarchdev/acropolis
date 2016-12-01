@@ -8,7 +8,7 @@ rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 olo = Namespace("http://purl.org/ontology/olo/core#")
 
 acropolis_quilt = "http://acropolis.localhost"
-acropolis_twine_remote = "http://acropolis.localhost:8000/ingest"
+acropolis_twine_remote = "http://acropolis:8000/ingest"
 
 ingested = {}
 
@@ -42,8 +42,13 @@ def request_endpoint(context, endpoint):
   context['response'] = requests.get(uri, headers=headers)
 
 
+@then("The response contains <text>")
+def check_record_contains(context, text):
+  assert text in context['response'].text
+
+
 @then("I get a record for <uri>")
-def check_record_contains(context, uri):
+def check_record_contains_uri(context, uri):
   assert uri in context['response'].text
 
 

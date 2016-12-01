@@ -3,7 +3,7 @@ import urllib.parse;
 
 from rdflib import Namespace
 
-host = "acropolis.localhost"
+host = "localhost"
 rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 olo = Namespace("http://purl.org/ontology/olo/core#")
 
@@ -41,8 +41,8 @@ for audiences in audiences_list:
 
   print("-" * 80)
   print(uri)
-  for key in o:
-    print("Key {}".format(key))
+  #for key in o:
+  #  print("Key {}".format(key))
   slots = o[uri].get(str(olo.slot),[])
   print("Slots: {}".format(len(slots)))
   for slot in slots:
