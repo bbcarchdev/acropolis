@@ -6,11 +6,11 @@ Scenario Outline: Media correctly licensed
   Given some ingested test data <file>
   Given an audience <audience>
   When I request <endpoint>
-  Then I get a record for <uri>
+  Then The response contains <text>
 
   Examples:
-    | file                  | audience                                      | endpoint   | uri |
-    | shakespeare-sample.nq | http://shakespeare.acropolis.org.uk/#members  | everything | http://acropolis.localhost/72ae752c83ee4968a70ae80f6c22f2b7#id |
+    | file                  | audience                                      | endpoint   | text |
+    | shakespeare-sample.nq | http://shakespeare.acropolis.org.uk/#members  | everything | Accessible only by authorised users in formal education in the UK |
 
 
 Scenario Outline: Audiences for
