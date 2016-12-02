@@ -10,3 +10,8 @@ git checkout develop
 git pull
 git submodule update --init --recursive
 cd ..
+cd twine
+git checkout develop
+git pull
+git submodule update --init --recursive
+cd ..
