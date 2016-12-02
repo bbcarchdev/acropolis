@@ -15,8 +15,10 @@ ingested = {}
 @pytest.fixture
 def context():
   return {
-    'uri': '',
-    'query': '',
+    'params' : {},
+    'headers' : {
+      'Accept': 'application/json',
+    },
     'response': None,
   }
 
@@ -32,18 +34,21 @@ def ingest(file):
     ingested[file] = requests.post(acropolis_twine_remote, headers=headers, data=f.read())
 
 
+@when("I supply the parameter <name> <value>")
+def set_parameter(context, name, value):
+  context['params'][name] = value
+
+
 @when("I request <endpoint>")
 def request_endpoint(context, endpoint):
-  headers = {
-    'Accept': 'application/json',
-  }
-  uri = '{}/{}{}'.format(acropolis_quilt, endpoint,  context['query'])
-  context['uri'] = uri
-  context['response'] = requests.get(uri, headers=headers)
+  uri = '{}/{}'.format(acropolis_quilt, endpoint)
+  context['response'] = requests.get(uri, headers=context['headers'], params=context['params'])
+  context['uri'] = context['response'].request.url
 
 
 @then("The response contains <text>")
 def check_record_contains(context, text):
+  print( context['response'].text )
   assert text in context['response'].text
 
 
@@ -55,7 +60,7 @@ def check_record_contains_uri(context, uri):
 @then("I should have <slots> slots")
 def check_slots(context, slots):
   o = context['response'].json()
-  uri = context['uri']
+  uri = context['response'].request.url
 
   olo_slots = o[uri].get(str(olo.slot),[])
   assert int(slots) == len(olo_slots)

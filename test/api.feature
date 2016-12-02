@@ -2,7 +2,7 @@ Feature: API
   Basic endpoint and filters tests
 
 
-Scenario Outline: Audiences Endpoint
+Scenario Outline: API Endpoints
   Given some ingested test data <file>
   When I request <endpoint>
   Then The response contains <text>
@@ -21,3 +21,13 @@ Scenario Outline: Audiences Endpoint
     | bob-sample.nq         | events      | The Andrew Marr Show |
     | dracula.nq            | places      | http://acropolis.localhost/places |
     | dracula.nq            | assets      | Photograph of Count Dracula |
+
+Scenario Outline: API Endpoints with filters
+  Given some ingested test data <file>
+  When I request <endpoint>
+  And I supply the parameter <name> <value>
+  Then The response contains <text>
+
+  Examples:
+    | file                  | endpoint    | name | value | text |
+    | shakespeare-sample.nq | everything  | q    | judi  | Judi Dench |
