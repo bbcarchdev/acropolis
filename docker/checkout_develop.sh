@@ -15,3 +15,8 @@ git checkout develop
 git pull
 git submodule update --init --recursive
 cd ..
+cd anansi
+git checkout develop
+git pull
+git submodule update --init --recursive
+cd ..
