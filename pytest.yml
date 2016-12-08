@@ -5,6 +5,8 @@ services:
     container_name: acropolis
     entrypoint:
       - docker/init_db.sh
+    environment:
+      - ACROPOLIS_HOSTNAME=acropolis.localhost
     command: supervisord
     build:
       context: .

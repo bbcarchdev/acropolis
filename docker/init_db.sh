@@ -4,6 +4,11 @@ set -e
 # Load the functions
 source ./docker/functions.sh
 
+# Set the hostname in the config files
+sed -i -e "s|ACROPOLIS_HOSTNAME|${ACROPOLIS_HOSTNAME-localhost}|" /usr/etc/twine.conf
+sed -i -e "s|ACROPOLIS_HOSTNAME|${ACROPOLIS_HOSTNAME-localhost}|" /usr/etc/twine-anansi.conf
+sed -i -e "s|ACROPOLIS_HOSTNAME|${ACROPOLIS_HOSTNAME-localhost}|" /usr/etc/quilt.conf
+
 # Wait for Postgres
 wait_for_service postgres 5432
 
