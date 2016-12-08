@@ -59,6 +59,7 @@ services:
   twine-spindle:
     image: acropolis
     command: /usr/sbin/twine-writerd -d -c /usr/etc/twine.conf -f
+    #command: tail -f /dev/null
     entrypoint:
       - ./docker/run.sh
     depends_on:
@@ -115,11 +116,13 @@ services:
   postgres:
     image: postgres:9.1
     ports:
-      - 5432:5432
+      - 32770:5432
 
   # Tstore for the output of twine-anansi and the command line client twine
   fourstore:
     image: cgueret/4store
+    ports:
+      - 9000:9000
 
   # S3 used to cache objects from Anansi and data processing output from Spindle
   s3:
