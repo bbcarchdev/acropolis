@@ -21,6 +21,7 @@ logging.basicConfig(level=logging.DEBUG)
 import select
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+
 DSN = 'host=postgres dbname=spindle user=postgres password=postgres'
 
 REMOTE_DATA = '/tmp/remote-data.nq'
