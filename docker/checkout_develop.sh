@@ -1,6 +1,7 @@
 #!/bin/bash
+set -e
 
-for repo in quilt spindle twine anansi; do
+for repo in quilt spindle twine anansi libsql; do
   cd $repo
   git checkout develop
   git pull
