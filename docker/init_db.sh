@@ -14,9 +14,9 @@ wait_for_service postgres 5432
 
 # Create the DB. They need to be all there before the init is triggered.
 do_init=false
-for db in anansi spindle cluster; do
+for db in anansi spindle cluster twine; do
 	if db_exists ${db}; then
-    	echo "$(date) - database ${db} exists"
+	echo "$(date) - database ${db} exists"
 	else
 		echo "$(date) - creating database ${db}"
 		create_db ${db};
@@ -32,6 +32,7 @@ if [ "${do_init}" = true ] ; then
 	echo "$(date) - doing schema migration with Twine"
 	twine -c /usr/etc/twine.conf -S >/dev/null 2>&1
 	wait_for_schema spindle com.github.bbcarchdev.spindle.twine 24
+	wait_for_schema twine com.github.bbcarchdev.twine 1
 
 	# Use twine to migrate the schema for 'spindle'
 	echo "$(date) - doing schema migration with Anansi"
