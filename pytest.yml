@@ -39,8 +39,13 @@ services:
     ports:
       - 5432:5432
 
+  # Tstore for the output of twine-anansi and the command line client twine
   fourstore:
-    image: vm-10-100-0-25.ch.bbcarchdev.net/4store
+    image: cgueret/4store
 
+  # S3 used to cache objects from Anansi and data processing output from Spindle
   s3:
-    image: vm-10-100-0-25.ch.bbcarchdev.net/s3
+    image: lphoward/fake-s3
+    expose:
+      - 80
+    command: -r /fakes3_root -p 80
