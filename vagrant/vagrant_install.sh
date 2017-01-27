@@ -1,23 +1,27 @@
-locale-gen en_GB.UTF-8
-export DEBIAN_FRONTEND=noninteractive
+yum -y install epel-release 
+yum repolist
 
-sed -i 's/httpredir.debian.org/mirror.vorboss.net/g' /etc/apt/sources.list
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9E16A4D302DA096A && \
-
-#echo "deb [arch=amd64] http://apt.bbcarchdev.net/debian/ wheezy main ports live stage dev" \
-#  >> /etc/apt/sources.list.d/bbcarchdev-wheezy.list
-
-apt-get update
+yum -y install git
 
 #######################################################################
 # Install additional tools for some debugging, running the remote, etc
 #######################################################################
-apt-get install -y --no-install-recommends \
-  python3 python3-psycopg2 netcat netcat-traditional vim mc ngrep \
-  procps tcpdump supervisor postgresql-client git
 
-apt-get -y install \
-  libcunit1-ncurses-dev \
+# Need to find rpms later
+#yum install \
+#  git \
+#  python36 \
+#  python3-psycopg2 \
+#  netcat \
+#  netcat-traditional \
+#  vim \
+#  mc \
+#  ngrep \
+#  procps tcpdump supervisor postgresql-client
+
+yum -y install \
+  CUnit-devel.x86_64 \
+  CUnit.x86_64 \
   gdb \
   valgrind \
   curl
@@ -27,8 +31,10 @@ apt-get -y install \
 #################################################
 
 # Install Apache
-apt-get install -y --no-install-recommends \
-  apache2 libapache2-mod-fcgid
+yum -y install \
+  httpd.x86_64 \
+  httpd-devel.x86_64 \
+  mod_fcgid.x86_64
 
 export APACHE_RUN_USER=www-data
 export APACHE_RUN_GROUP=www-data
@@ -44,14 +50,42 @@ a2enmod fcgid
 #################################################
 
  # Install dependencies
- apt-get install -y --no-install-recommends \
-   build-essential libtool libltdl-dev automake \
-   autoconf pkg-config libcurl4-gnutls-dev autotools-dev \
-   libraptor2-dev librasqal3-dev librdf0-dev libfcgi-dev \
-   libjansson-dev libxml2-dev libssl-dev \
-   flex gettext python-libxml2 libpq-dev libmysqlclient-dev \
-   uuid-dev libncurses5-dev libedit-dev
-
- rm -rf /var/lib/apt/lists/*
-
-
+yum -y groupinstall 'Development Tools'
+yum -y install \
+  automake \
+  autoconf \
+  flex \
+  gettext \
+  libtool-ltdl.x86_64 \
+  libtool-ltdl-devel.x86_64 \
+  pkgconfig.x86_64 \
+  libcurl-devel.x86_64 \
+  raptor2-devel.x86_64 \
+  raptor2.x86_64 \
+  rasqal-devel-0.9.30-4.el7.x86_64 \
+  rasqal-devel.x86_64 \
+  rasqal.x86_64 \
+  redland.x86_64 \
+  redland-devel.x86_64 \
+  fcgi-devel.x86_64 \
+  jansson.x86_64 \
+  jansson-devel.x86_64 \
+  libxml2.x86_64 \
+  libxml2-devel.x86_64 \
+  libxslt.x86_64 \
+  libxslt-devel.x86_64 \
+  openssl.x86_64 \
+  openssl-libs.x86_64 \
+  libxml2-python \
+  libpqxx-devel.x86_64 \
+  libpqxx.x86_64 \
+  mariadb-devel.i686 \
+  mariadb-devel.x86_64 \
+  uuid.x86_64 \
+  uuid-devel.x86_64 \
+  libuuid.x86_64 \
+  libuuid-devel.x86_64 \
+  ncurses.x86_64 \
+  ncurses-devel.x86_64 \
+  libedit-devel.x86_64 \
+  libedit.x86_64

@@ -12,14 +12,14 @@ Vagrant.configure("2") do |config|
     cpus = 1
   end
 
-  config.vm.box = "debian/jessie64"
+  config.vm.box = "centos/7"
 
   #config.vm.synced_folder ".", "/home/vagrant/module", owner: 'vagrant', group: 'vagrant'
 
   config.ssh.forward_agent = true
 
-  config.vm.provision :shell, :path => "vagrant/vagrant_install.sh"
-  config.vm.provision :shell, :privileged => true, :path => "vagrant/module_install.sh"
+  config.vm.provision :shell, :privileged => true, :path => "vagrant/vagrant_install.sh"
+  config.vm.provision :shell, :privileged => false, :path => "vagrant/module_install.sh"
 
   config.vm.provider :virtualbox do |virtualbox|
     virtualbox.customize ["modifyvm", :id, "--cpus", cpus]
