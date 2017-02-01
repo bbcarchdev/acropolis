@@ -2,7 +2,7 @@
 set -e
 
 echo Waiting for services...
-count=15
+count=20
 until nc -z acropolis 80; do
     echo "$(date) - (${count}) waiting for quilt..."
 		count=$((count-1))
