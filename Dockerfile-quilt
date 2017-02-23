@@ -1,0 +1,3 @@
+FROM acropolis
+RUN rm /usr/etc/quilt.conf
+RUN ln -s /usr/local/src/docker/quilt-static.conf /usr/etc/quilt.conf

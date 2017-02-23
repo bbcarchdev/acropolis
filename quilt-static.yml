@@ -1,0 +1,35 @@
+version: '2'
+services:
+  # Base instance of Acropolis. Used here to init the DBs and show the doc
+  acropolis:
+    privileged: true
+    entrypoint:
+      - ./docker/init_db.sh
+    image: acropolis
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/usr/local/src
+      - ./test/data:/data
+
+  # LOD frontend
+  quilt-static:
+    image: acropolis
+    command: /usr/sbin/apache2 -D FOREGROUND
+    build:
+      context: .
+      dockerfile: Dockerfile-quilt
+    entrypoint:
+      - ./docker/run.sh
+    environment:
+      - HOST_NAME=localhost
+    volumes_from:
+      - acropolis
+    ports:
+      - 81:80
+
+# Data volume shared across all the services. Can be used as a persistent store
+# to save data (eg NQuads) across re-creation of the containers
+volumes:
+  data: {}
