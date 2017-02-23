@@ -3,8 +3,6 @@ services:
   # Base instance of Acropolis. Used here to init the DBs and show the doc
   acropolis:
     privileged: true
-    entrypoint:
-      - ./docker/init_db.sh
     image: acropolis
     build:
       context: .
@@ -20,8 +18,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-quilt
-    entrypoint:
-      - ./docker/run.sh
     environment:
       - HOST_NAME=localhost
     volumes_from:
