@@ -7,21 +7,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    volumes:
-      - .:/usr/local/src
-      - ./test/data:/data
 
   # LOD frontend
   quilt-static:
-    image: acropolis
     command: /usr/sbin/apache2 -D FOREGROUND
     build:
       context: .
       dockerfile: Dockerfile-quilt
     environment:
       - HOST_NAME=localhost
-    volumes_from:
-      - acropolis
+    volumes:
+      - ./test/data:/data
     ports:
       - 81:80
 
