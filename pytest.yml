@@ -1,8 +1,8 @@
 version: '2'
 services:
-  acropolis:
-    image: acropolis
-    container_name: acropolis
+  acropolis-test:
+    image: acropolis-test
+    container_name: acropolis-test
     entrypoint:
       - docker/init_db.sh
     environment:
@@ -22,6 +22,8 @@ services:
     expose:
      - "80"
      - "8000"
+    ports:
+     - 80:80
 
   pytest:
     container_name: pytest
@@ -30,9 +32,10 @@ services:
       context: .
       dockerfile: Dockerfile-pytest
     depends_on:
-      - acropolis
+      - acropolis-test
     links:
-      - acropolis:acropolis.localhost
+      - acropolis-test:acropolis.localhost
+      - acropolis-test:acropolis
 
   postgres:
     image: postgres:9.1
