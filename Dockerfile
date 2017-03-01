@@ -62,7 +62,6 @@ COPY . /usr/local/src
 # Compile everything
 RUN autoreconf -i --force \
 	&& ./configure --prefix=/usr --enable-debug --disable-docs \
-	&& make clean \
 	&& make \
 	&& make install
 

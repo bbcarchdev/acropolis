@@ -33,6 +33,8 @@ services:
       - acropolis
     links:
       - acropolis:acropolis.localhost
+    volumes:
+      - ./test:/acropolis_test
 
   postgres:
     image: postgres:9.1
