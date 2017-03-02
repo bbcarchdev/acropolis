@@ -22,6 +22,9 @@ def context():
     'response': None,
   }
 
+@given("I accept content as <content>")
+def accept_content(context, content):
+  context['headers']['Accept'] = content
 
 @given("some ingested test data <file>")
 def ingest(file):
