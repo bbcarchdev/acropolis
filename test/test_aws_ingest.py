@@ -5,31 +5,31 @@ from bs4 import BeautifulSoup
 from rdflib.graph import Dataset
 
 '''
-NOTE : This test is not giving consistant data say for nq = dracula.nq, triples_count has varied from 73 to 117
-with 104 set for expectation.
+NOTE : This test is not giving consistant data say for nq = dracula.nq, triples_count has varied from 73 to 164.
 Hence for debug purpose, temp files created are not removed with in test tear down.
+Test has been run with simple files(n-quads) which return proxy uuids less or equal to 25.
 '''
 scenarios('aws_ingest.feature')
 
 acropolis_quilt = "http://acropolis.localhost"
 
 def fetch_proxy_uuids(context):
-    '''
+    """
     Read proxy uuids from description list of HTML
     :param context: For accessing html that was resulted from GET opeartion
     :return: List of proxy uuids
-    '''
+    """
     soup = BeautifulSoup(context['response'].content, "html.parser")
     temp_p_uuids = soup.find_all("dd", class_="uri")
     p_uuids = [p_uri.a.get_text().strip('#id') for p_uri in temp_p_uuids]
     return p_uuids
 
 def fetch_triples(p_uuids):
-    '''
+    """
     Traverse the list of proxy uuids, fetch RDF from them and return triples count
     :param p_uuids: List of proxy uuids
     :return: count of triples encountered
-    '''
+    """
 
     # Create a file with only predicates and objects of each triple encountered.
     with open('dev_inst.data', 'w') as pred_obj_file:
@@ -38,7 +38,7 @@ def fetch_triples(p_uuids):
 
         # Create an URI from proxy UUID, request ttl form of RDF and dump it to temp file.
         for p_uri in p_uuids:
-            uri = '{}/{}{}'.format(acropolis_quilt, p_uri, '.ttl')
+            uri = '{}{}{}'.format(acropolis_quilt, p_uri, '.ttl')
             r = requests.get(uri)
 
             rdf_file = str(itr) + 'rdf_data.ttl'
@@ -64,6 +64,5 @@ def check_rdf_data(context, count):
     triples_count = fetch_triples(p_uuids)
     print('triples_count : ', triples_count)
 
-    # Below line is commented since this test need to be executed in isolation w/o any other ingests.
-    # Work in progress for that, but commiting it so as to share the code with in the team.
+    # Below line is commented as triple_count is always different, Would it be another bug to raise ?
     #assert(int(count) == triples_count)

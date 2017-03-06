@@ -8,7 +8,9 @@ rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
 olo = Namespace("http://purl.org/ontology/olo/core#")
 
 acropolis_quilt = "http://acropolis.localhost"
-acropolis_twine_remote = "http://acropolis:8000/ingest"
+acropolis_twine_remote = "http://acropolis:8000"
+acropolis_twine_remote_ingest = acropolis_twine_remote + '/ingest'
+acropolis_twine_remote_delete = acropolis_twine_remote + '/delete'
 
 ingested = {}
 
@@ -22,6 +24,11 @@ def context():
     'response': None,
   }
 
+@given("Stack don't have any data")
+def clear_data():
+  requests.post(acropolis_twine_remote_delete)
+  ingested.clear()
+
 @given("I accept content as <content>")
 def accept_content(context, content):
   context['headers']['Accept'] = content
@@ -34,7 +41,7 @@ def ingest(file):
     'Content-Type': 'text/x-nquads'
   }
   with open("data/" + file, 'r') as f: 
-    ingested[file] = requests.post(acropolis_twine_remote, headers=headers, data=f.read())
+    ingested[file] = requests.post(acropolis_twine_remote_ingest, headers=headers, data=f.read())
 
 
 @when("I supply the parameter <name> <value>")

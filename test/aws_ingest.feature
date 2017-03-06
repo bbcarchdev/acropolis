@@ -5,6 +5,7 @@ Feature: AWS Ingest
 # for now.
 
 Scenario Outline: Ingest and retrieve RDF data on local instance
+  Given Stack don't have any data
   Given some ingested test data <file>
   Given I accept content as <content>
   When I request <endpoint>
@@ -12,4 +13,4 @@ Scenario Outline: Ingest and retrieve RDF data on local instance
 
   Examples:
     | file                | content     | endpoint   | count  |
-    | dracula.nq          | text/html   | everything | 104    |
+    | dracula.nq          | text/html   | everything | 156    |
