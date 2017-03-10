@@ -37,6 +37,9 @@ services:
       - acropolis-test:acropolis.localhost
       - acropolis-test:acropolis
 
+    volumes:
+      - ./test:/acropolis_test
+
   postgres:
     image: postgres:9.1
     expose:

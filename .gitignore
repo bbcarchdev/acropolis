@@ -10,6 +10,9 @@
 *.pc
 .deps
 .libs
+.cproject
+.project
+.settings
 Makefile.in
 Makefile
 autom4te.cache
@@ -30,3 +33,6 @@ autom4te.cache
 /stamp-h1
 /confdefs.h
 /test-driver
+/test/.idea
+/test/__pycache__/
+/test/.*
