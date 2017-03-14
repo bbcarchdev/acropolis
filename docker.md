@@ -63,6 +63,11 @@ processing engine Spindle (via the workflow engine Twine)
 curl -X POST --header "Content-Type: text/x-nquads" --data-binary @shakespeare-sample.nq  http://localhost:8000/ingest
 ```
 
+## Wipeout ingested data(if any) using remote control
+```
+curl -X POST http://localhost:8000/delete
+```
+
 ## Monitoring if things are being processed
 ```
 watch -n2 'docker exec acropolis_postgres_1 psql spindle postgres -c "SELECT COUNT(*), status FROM STATE GROUP BY status;"'
