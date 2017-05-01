@@ -11,7 +11,7 @@ before_install:
 - curl https://raw.githubusercontent.com/bbcarchdev/bbcarchdev-keys/main/bbcarchdev-apt.asc | sudo apt-key add -
 - echo "deb [arch=amd64] https://apt.bbcarchdev.net/debian wheezy main ports dev stage live" | sudo tee -a /etc/apt/sources.list
 - sudo apt-get update -qq
-- sudo apt-get install -qq libjansson-dev libmysqlclient-dev libpq-dev libqpid-proton-dev libcurl4-gnutls-dev libxml2-dev librdf0-dev libltdl-dev uuid-dev libfcgi-dev automake autoconf libtool pkg-config
+- sudo apt-get install -qq libjansson-dev libmysqlclient-dev libpq-dev libqpid-proton-dev libcurl4-gnutls-dev libxml2-dev librdf0-dev libltdl-dev uuid-dev libfcgi-dev automake autoconf libtool pkg-config libcunit1-ncurses-dev
 before_script:
 - autoreconf -f -i
 script:
