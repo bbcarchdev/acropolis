@@ -1,4 +1,4 @@
-# Introduction
+# Introduction 
 
 This project contains a complete buildable version of the [Research & Education Space](https://bbcarchdev.github.io/res/) stack, _Acropolis_.
 

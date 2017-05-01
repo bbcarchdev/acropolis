@@ -1,3 +1,4 @@
 pytest-bdd
 rdflib
 requests
+beautifulsoup4

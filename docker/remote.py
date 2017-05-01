@@ -21,6 +21,7 @@ logging.basicConfig(level=logging.DEBUG)
 import select
 import psycopg2
 from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
+
 DSN = 'host=postgres dbname=spindle user=postgres password=postgres'
 
 REMOTE_DATA = '/tmp/remote-data.nq'
@@ -72,6 +73,13 @@ class Handler(BaseHTTPRequestHandler):
                 response['status'] = status
                 response['command'] = args
                 response['message'] = 'Ingest completed'
+                self._reply_with(200, response)
+
+            elif self.path == '/delete':
+                curs = self.server.db.cursor()
+                curs.execute("TRUNCATE audiences, index, index_media, licenses_audiences, media,"
+                             " membership, moved, proxy, state;")
+                response['message'] = 'Delete completed'
                 self._reply_with(200, response)
         except CalledProcessError as e:
             response['status'] = e.output
