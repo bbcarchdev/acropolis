@@ -190,3 +190,8 @@ The majority of the Acropolis stack is licensed under the terms of the
 However, see the documentation within individual submodules for exceptions
 to this and information about third-party components which have been
 incorporated into the tree.
+
+[travis]: https://img.shields.io/travis/bbcarchdev/acropolis.svg
+[license]: https://img.shields.io/badge/license-Apache%202.0-blue.svg
+[language]: https://img.shields.io/badge/implemented%20in-C-yellow.svg 
+[twitter]: https://img.shields.io/twitter/url/http/shields.io.svg?style=social&label=Follow%20@RES_Project
