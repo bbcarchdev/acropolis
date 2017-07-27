@@ -58,6 +58,8 @@ complicate the standard build logic).
 
 ## Using Acropolis
 
+Once you have built and installed the Acropolis stack, you probably want to do something with it.
+
 Acropolis consists of a number of different individual components, including
 libraries, command-line tools, web-based servers, and back-end daemons. They
 are:—
@@ -78,6 +80,89 @@ are:—
 
 Note that this repository exists for development and testing purposes *only*: in
 a production environment, each component is packaged and deployed individually.
+
+### Components
+
+#### Anansi
+
+Anansi is a web crawler. It uses a relational database to track URLs that will be fetched, their status, and cache IDs. Anansi can operate in resizeable clusters of up to 256 nodes via [libcluster](https://github.com/bbcarchdev/libcluster).
+
+Anansi has the notion of a *processor* —a named implementation of the "business logic" of evaluating resources that have been retrieved and using them to add new entries to the queue.
+
+In the Research & Education Space, Anansi is configured to use the `lod` (Linked Open Data) processor, which:
+
+* Only accepts resources which can be parsed by `librdf`
+* Can apply licensing checks (based upon a configured list)
+* Adds any URIs that it finds in retrieved RDF to the crawl queue (allowing spidering to actually occur)
+
+#### Twine
+
+Twine is a modular RDF-oriented processing engine. It can be configured to do a number of different things, but its main purpose is to fetch some data, convert it if necessary, perform some processing, and then put it somewhere.
+
+Twine can operate as a daemon, which will continuously fetch data to process from a queue of some kind (see [libmq](https://github.com/bbcarchdev/libmq)), or it can be invoked from the command-line to ingest data directly from a file.
+
+Twine is extended through two different kinds of loadable modules (which reside in `${libdir}/twine`, by default `/opt/res/lib/twine`):
+
+* *Handlers* are responsible for taking some input and populating an RDF model based upon it. The mechanism is flexible enough to allow, for example, the input data to be a set of URLs which the module should fetch and parse, but it's also used for data conversion.
+* *Processors* are modules which can manipulate the RDF model in some way, including dealing with storage and output.
+
+Twine ships with a number of modules for interacting with SPARQL servers, XML data ingest via XSLT transform, as well as parsing and outputting RDF. More information can be found in the [Twine README](https://github.com/bbcarchdev/twine#plug-ins).
+
+Twine is always configured with a *workflow*: a list of processors which should be invoked in turn for each item of data being processed. Like all configuration options, the workflow can be specified on the command-line.
+
+In the Research & Education Space, the [Spindle](#spindle) project provides additional Twine modules which implement the key logic of the platform.
+
+#### Quilt
+
+Quilt is a Linked Data server designed to efficiently serve RDF data in a variety of serialisations, including templated HTML. Like Twine, Quilt is modular (see `${libdir}/quilt`), and in particular modules are used to provide *engine* implementations—these are the code responsible for populating an RDF model based upon the request parameters (Quilt itself then handles the serving of that model). The [Spindle](#spindle) project includes a Quilt module which implements the Research & Education Space public API.
+
+#### Spindle
+
+[Spindle](https://github.com/bbcarchdev/spindle) is the core of the Research & Education Space. It includes three processor modules for [Twine](#twine):
+
+* `spindle-strip` uses a [rulebase](#the-rulebase) to decide which triples in an RDF model should be retained and which should be discarded.
+* `spindle-correlate` processes graphs in conjunction with a SPARQL server (and optionally a PostgreSQL database) in order to aggregate *co-references*: the result is distinct RDF descriptions about the same things are clustered together.
+* `spindle-generate` performs indexing of RDF data, including dealing with media resource licensing, and is responsible for generating "proxy" sets of triples which summarise the Research & Education Space's interpretation of the various pieces of source data about each thing they describe.
+
+It also includes a module for [Quilt](#quilt), which uses the data from `spindle-correlate` and `spindle-generate` in order to provide the Research & Education Space API.
+
+### Running the stack
+
+Annotated configuration files are provided in the [`config`](config) directory which should help get you started. By default, the components expect to find these files in `/opt/res/etc`, but this can be altered by specifying the `--prefix` or `--sysconfdir` options when invoking the top-level `configure` script.
+
+#### Requirements
+
+You will need:
+
+* A PostgreSQL database server, with databases for Anansi and Spindle (you do not need to define any tables or views, the schemas will be generated automatically)
+* A [RADOS](http://docs.ceph.com/docs/master/rados/) or [FakeS3](https://github.com/jubos/fake-s3) bucket for Anansi and one for Spindle. Note that pending resolution of [`libawsclient#1`](https://github.com/bbcarchdev/libawsclient/issues/1), you can no longer use a real Amazon S3 bucket for storage.
+* A SPARQL server, such as [4store](https://github.com/4store/4store).
+
+In production, the Research & Education Space uses PostgreSQL, RADOS, and 4store. It has been successfully used in development environments with FakeS3 and alternative SPARQL servers.
+
+#### Running Anansi
+
+**Important!** Do not run the Anansi daemon (`crawld`) without first carefully checking the configuration to ensure that it doesn’t simply start crawling the web unchecked. If you're using the `lod` engine, you can enforce restrictions 
+
+Anansi will use the PostgreSQL database you provide it to store the queue and cache state, and either an "S3" bucket (see above) or a filesystem path as a cache store, which will contain both metadata and the actual content of retrieved resources.
+
+Once configured, you can invoke `crawld -t <URI>` to perform a single fetch of a URI that you specify. Depending upon the processor and the resource itself, this may cause other URIs to be added to the crawler queue in the database, but the `-t` option will cause the `crawld` process will exit once the URI specified on the command-line has been fetched.
+
+#### Running Twine
+
+Twine itself can be configured in many different ways, but in the Research & Education Space, there are two kinds of Twine instance:
+
+* *Correlate* instances, which ingest RDF, updating an index of co-references in the PostgreSQL database, and storing the RDF in 4store.
+* *Generate* instances, which processes items whose data has been recently been updated by the Correlate process (i.e., the Spindle PostgreSQL database is used as the queue), and updates indexes in the PostgreSQL database and storing N-Quads serialisations of the data about each things in the S3 bucket for Quilt to use.
+
+For development and testing, the easiest way to emulate the production configuration is to have two Twine configurations, one for each of the two instance types. You can then run the Twine *daemon* in the background performing the "generate" tasks, while invoking the Twine command-line utility using the *correlate* configuration to process N-Quads files on disk.
+
+Based upon the [sample configuration files](config), you should be able to do something like this:
+
+	$ sudo /opt/res/sbin/twine-writerd -c /opt/res/etc/twine-generate.conf
+	$ /opt/res/bin/twine -c /opt/res/etc/twine-correlate.conf some-data.nq
+
+Note that using `sudo` isn't required if the `twine-writerd` PID file can be written as an unprivileged user.
 
 ### Inside Acropolis
 
