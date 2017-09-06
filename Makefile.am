@@ -1,13 +1,9 @@
-## The Research & Education Space
-##
-## A platform being jointly delivered by Jisc, the British Universities
-## Film & Video Council (BUFVC), and the BBC with the aim of bringing as
-## much as possible of the UK’s publicly-held archives, and more besides,
-## to learners and teachers across the UK.
+## Acropolis
+## A toolkit for building knowledge graphs
 
 ## Author: Mo McRoberts <mo.mcroberts@bbc.co.uk>
 ##
-## Copyright (c) 2015 BBC
+## Copyright (c) 2017 BBC
 ##
 ##  Licensed under the Apache License, Version 2.0 (the "License");
 ##  you may not use this file except in compliance with the License.
