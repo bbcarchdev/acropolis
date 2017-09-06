@@ -7,7 +7,7 @@
 ##
 ## Author: Mo McRoberts <mo.mcroberts@bbc.co.uk>
 ##
-## Copyright (c) 2015 BBC
+## Copyright (c) 2016-2017 BBC
 ##
 ##  Licensed under the Apache License, Version 2.0 (the "License");
 ##  you may not use this file except in compliance with the License.
@@ -93,6 +93,12 @@ BT_LIB_ADD_PKGCONFIG([$here/twine-anansi-bridge])
 
 AC_CONFIG_SUBDIRS([spindle])
 BT_LIB_ADD_PKGCONFIG([$here/spindle])
+
+AC_CONFIG_SUBDIRS([patchwork])
+BT_LIB_ADD_PKGCONFIG([$here/patchwork])
+
+AC_CONFIG_SUBDIRS([libresclient])
+BT_LIB_ADD_PKGCONFIG([$here/libresclient])
 
 AC_CONFIG_FILES([
 Makefile
