@@ -97,8 +97,10 @@ BT_LIB_ADD_PKGCONFIG([$here/spindle])
 AC_CONFIG_SUBDIRS([patchwork])
 BT_LIB_ADD_PKGCONFIG([$here/patchwork])
 
-AC_CONFIG_SUBDIRS([libresclient])
-BT_LIB_ADD_PKGCONFIG([$here/libresclient])
+if test -d libresclient ; then
+	AC_CONFIG_SUBDIRS([libresclient])
+	BT_LIB_ADD_PKGCONFIG([$here/libresclient])
+fi
 
 AC_CONFIG_FILES([
 Makefile
