@@ -51,3 +51,6 @@
 [submodule "twine-anansi-bridge"]
 	path = twine-anansi-bridge
 	url = git://github.com/bbcarchdev/twine-anansi-bridge.git
+[submodule "patchwork"]
+	path = patchwork
+	url = git://github.com/bbcarchdev/patchwork.git
