@@ -116,7 +116,7 @@ services:
   postgres:
     image: postgres:9.1
     ports:
-      - 32770:5432
+      - 5432:5432
 
   # Tstore for the output of twine-anansi and the command line client twine
   fourstore:
@@ -130,6 +130,8 @@ services:
     expose:
       - 80
     command: -r /fakes3_root -p 80
+    ports:
+      - 8080:80
 
 # Data volume shared across all the services. Can be used as a persistent store
 # to save data (eg NQuads) across re-creation of the containers

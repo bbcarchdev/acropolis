@@ -73,8 +73,10 @@ RUN autoreconf -i --force \
 RUN rm -f /usr/etc/twine.conf \
 	&& rm -f /usr/etc/quilt.conf \
 	&& rm -f /usr/etc/crawl.conf \
-    && ln -s /usr/local/src/docker/crawl.conf /usr/etc/crawl.conf \
-	&& ln -s /usr/local/src/docker/quilt.conf /usr/etc/quilt.conf \
+	&& ln -s /usr/local/src/config/crawl.conf /usr/etc/crawl.conf \
+	&& ln -s /usr/local/src/config/twine-generate.conf /usr/etc/twine-generate.conf \
+	&& ln -s /usr/local/src/config/twine-correlate.conf /usr/etc/twine-correlate.conf \
+	&& ln -s /usr/local/src/config/quilt.conf /usr/etc/quilt.conf \
 	&& ln -s /usr/local/src/docker/twine.conf /usr/etc/twine.conf \
 	&& ln -s /usr/local/src/docker/twine-anansi.conf /usr/etc/twine-anansi.conf \
 	&& ln -s /usr/local/src/docker/supervisord.conf /etc/supervisor/conf.d/acropolis.conf
