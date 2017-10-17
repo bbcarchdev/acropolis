@@ -1,0 +1,33 @@
+#! /bin/sh
+
+if ! test -d .git ; then
+	echo "$0: must be executed from the top of the source repository" >&2
+	exit 1
+fi
+
+if test -z "$1" ; then
+	echo "usage: $0 BRANCH" >&2
+	exit 1
+fi
+
+here=`pwd`
+status=0
+for module in `git submodule | cut -c43- | cut -f1 -d' '` ; do
+	case "$module" in
+		docbook-html5|docs)
+			target="gh-pages"
+			;;
+		m4)
+			target="develop"
+			;;
+		*)
+			target="$1"
+	esac
+	echo ">>> Updating $module to $target" >&2
+	cd $module && \
+		git fetch origin $target && \
+		git checkout $target || status=$?
+	cd "$here" || exit $?
+done
+
+exit $status
