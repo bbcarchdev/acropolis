@@ -1,8 +1,8 @@
 version: '2'
 services:
-  acropolis-test:
-    image: acropolis-test
-    container_name: acropolis-test
+  acropolis-bdd:
+    image: acropolis-bdd
+    container_name: acropolis-bdd
     entrypoint:
       - docker/init_db.sh
     environment:
@@ -24,30 +24,34 @@ services:
      - "8000"
     ports:
      - 80:80
+     - 8000:8000
 
-  pytest:
-    container_name: pytest
-    command: pytest
+  behave:
+    container_name: behave
+    command: behave
+    #features/partitions.feature
+    environment:
+      - ACROPOLIS_HOSTNAME=acropolis.localhost
     build:
       context: .
-      dockerfile: Dockerfile-pytest
+      dockerfile: Dockerfile-behave
     depends_on:
-      - acropolis-test
+      - acropolis-bdd
     links:
-      - acropolis-test:acropolis.localhost
-      - acropolis-test:acropolis
+      - acropolis-bdd:acropolis.localhost
 
-    volumes:
-      - ./test:/acropolis_test
 
+  # DB used to store the indexes
   postgres:
     image: postgres:9.1
-    expose:
-      - "5432"
+    ports:
+      - 5432:5432
 
   # Tstore for the output of twine-anansi and the command line client twine
   fourstore:
     image: cgueret/4store
+    ports:
+      - 9000:9000
 
   # S3 used to cache objects from Anansi and data processing output from Spindle
   s3:
@@ -55,3 +59,5 @@ services:
     expose:
       - 80
     command: -r /fakes3_root -p 80
+    ports:
+      - 8080:80

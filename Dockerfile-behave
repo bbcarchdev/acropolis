@@ -1,21 +1,21 @@
 FROM python:3.6
 
-MAINTAINER custard@cpan.org
-ENV project acropolis_test
+MAINTAINER terry.panagoulis@bbc.co.uk
+ENV project acropolis_bdd
 
 RUN apt-get update && \
     apt-get -y install apt-utils
 
 RUN apt-get install -y --no-install-recommends git wget netcat netcat-traditional
 
-RUN apt-get -y install python-pip vim
+RUN apt-get -y install python3-pip vim
 
 WORKDIR /${project}
 
-ADD test/requirements.txt /${project}
+ADD /behave-data /${project}
 
 RUN pip install -r requirements.txt
 
-ADD test /${project}
-
 ENTRYPOINT ["./run.sh"]
+
+# CMD ["behave"]
