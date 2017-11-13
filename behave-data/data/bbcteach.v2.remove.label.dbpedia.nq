@@ -1,0 +1,78 @@
+<http://bbcteach.acropolis.org.uk/p00xrslk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk> <http://purl.org/dc/terms/hasFormat> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Act 3 Scene 1 - The murder scene\" (Turtle format)"@en <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<https://www.youtube.com/embed/irx9v4IQ7CU?list=PLcvEcrsF_9zJ0JEEr8Lp9c9_eYQzZBYcR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/MovingImage> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<https://www.youtube.com/embed/irx9v4IQ7CU?list=PLcvEcrsF_9zJ0JEEr8Lp9c9_eYQzZBYcR> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<https://www.youtube.com/embed/irx9v4IQ7CU?list=PLcvEcrsF_9zJ0JEEr8Lp9c9_eYQzZBYcR> <http://purl.org/dc/terms/license> <http://bbcteach.acropolis.org.uk/terms#id> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://www.w3.org/2000/01/rdf-schema#label> "Act 3 Scene 1 - The murder scene"@en <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://purl.org/dc/terms/description> "The conspirators isolate Caesar on the way to the Senate and, as they have planned, Metallus Cimber presents his petition. Caesar\u2019s egocentric refusal sets off the brutal assassination."@en <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://purl.org/dc/terms/language> "en-GB" <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://purl.org/ontology/po/synopsis> "Act 3, Scene 1, the murder scene from the RSC's production of Julius Caesar. The conspirators isolate Caesar on the way to the Senate and, as they have planned, Metallus Cimber presents his petition. Caesar\u2019s egocentric refusal sets off the brutal assassination."@en <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://rdfs.org/ns/void#inDataset> <http://bbcteach.acropolis.org.uk/#id> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/2634895/> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/2638360/> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/2641364/> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/6269131/> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://www.bbc.co.uk/ontologies/curriculum/taughtInField> <http://www.bbc.co.uk/education/subjects/zhbc87h#field-of-study> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+<http://bbcteach.acropolis.org.uk/p00xrslk#id> <http://www.w3.org/2002/07/owl#sameAs> <http://www.bbc.co.uk/programmes/p00xrslk#programme> <http://bbcteach.acropolis.org.uk/p00xrslk.ttl> .
+
+
+<http://bbcteach.acropolis.org.uk/p00qb4k7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7> <http://purl.org/dc/terms/hasFormat> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://www.bbc.co.uk/programmes/b01dd1jd#programme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/po/Episode> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://www.bbc.co.uk/programmes/b01dd1jd#programme> <http://purl.org/ontology/po/clip> <http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Macbeth Act 1 Scene 7 \u2013 Macbeth\u2019s dilemma (workshop)\" (Turtle format)"@en <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<https://www.youtube.com/embed/DZKJA_hopCQ?list=PLcvEcrsF_9zJ0JEEr8Lp9c9_eYQzZBYcR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/MovingImage> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<https://www.youtube.com/embed/DZKJA_hopCQ?list=PLcvEcrsF_9zJ0JEEr8Lp9c9_eYQzZBYcR> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<https://www.youtube.com/embed/DZKJA_hopCQ?list=PLcvEcrsF_9zJ0JEEr8Lp9c9_eYQzZBYcR> <http://purl.org/dc/terms/license> <http://bbcteach.acropolis.org.uk/terms#id> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/po/Clip> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.w3.org/2000/01/rdf-schema#label> "Macbeth Act 1 Scene 7 \u2013 Macbeth\u2019s dilemma (workshop)"@en <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://purl.org/dc/terms/description> "The director and actor rehearse Macbeth\u2019s soliloquy in which he decides not to kill Duncan. They discuss different interpretations of the lines and unpick key images in the speech."@en <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://purl.org/dc/terms/language> "en-GB" <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Actor> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Rehearsal> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Soliloquy> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://purl.org/ontology/po/synopsis> "The director and the actor playing Macbeth rehearse Macbeth\u2019s soliloquy in which he decides not to kill Duncan. They discuss different interpretations of the lines and unpick key images in the speech that explain why it would be wrong to kill the king. Through a mixture of interviews and rehearsal footage, we see director Michael Boyd and actor Jonathan Slinger develop their own ideas for understanding and staging this key speech. They consider the distinction between assassination and murder, and why Macbeth seems to be saying that having ambition is a negative trait. Jonathan Slinger talks about Macbeth\u2019s desire to repeat the successes of his grandfather, who also killed a king to gain the crown. From rehearsals of the 2011 RSC stage production of Macbeth. This clip is from the BBC/RSC series Shakespeare: Unlocked."@en <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://rdfs.org/ns/void#inDataset> <http://bbcteach.acropolis.org.uk/#id> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://search.yahoo.com/mrss/player> <https://www.youtube.com/embed/DZKJA_hopCQ?list=PLcvEcrsF_9zJ0JEEr8Lp9c9_eYQzZBYcR> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/2634895/> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/2638360/> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/2641364/> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.bbc.co.uk/ontologies/curriculum/nation> <http://sws.geonames.org/6269131/> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.bbc.co.uk/ontologies/curriculum/taughtInField> <http://www.bbc.co.uk/education/subjects/zhbc87h#field-of-study> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+<http://bbcteach.acropolis.org.uk/p00qb4k7#id> <http://www.w3.org/2002/07/owl#sameAs> <http://www.bbc.co.uk/programmes/p00qb4k7#programme> <http://bbcteach.acropolis.org.uk/p00qb4k7.ttl> .
+
+
+
+<http://bbcteach.acropolis.org.uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcteach.acropolis.org.uk/index.html> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcteach.acropolis.org.uk/index.ttl> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcteach.acropolis.org.uk/#id> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.html> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.html> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.html> <http://purl.org/dc/terms/title> "BBC Teach data for Research & Education Space (HTML)"@en <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.html> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcteach.acropolis.org.uk/#id> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/title> "BBC Teach data for Research & Education Space (Turtle)"@en <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/index.ttl> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcteach.acropolis.org.uk/#id> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/#id> <http://purl.org/dc/terms/description> "Data describing the videos in the BBC Teach channel on Youtube. It contains around 1700 carefully selected clips from the BBC archive, covering more than 20 subjects at early years, primary and secondary level, and across all national curricula. The media is licensed under the terms of the Standard Youtube Licence. "@en <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/#id> <http://purl.org/dc/terms/title> "BBC Teach data for Research & Education Space"@en <http://bbcteach.acropolis.org.uk/index.ttl> .
+<http://bbcteach.acropolis.org.uk/#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://bbcteach.acropolis.org.uk/index.ttl> .

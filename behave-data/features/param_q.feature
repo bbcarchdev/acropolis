@@ -13,7 +13,7 @@ Scenario Outline: Text search
 
   Examples:
     | file                  | query   | partition   | text                                                      |
-    | bbcsfx-00008000.nq           | african | works       | 'African market'                                          |
+    | bbcsfx-00008000.nq    | african | works       | 'African market'                                          |
     | shakespeare-sample.nq | judi    | everything  | 'Judi Dench'                                              |
     | shakespeare-sample.nq | judi    | people      | 'Judi Dench'                                              |
     | shakespeare-sample.nq | N/A     | works       | Henry V                                                   |
