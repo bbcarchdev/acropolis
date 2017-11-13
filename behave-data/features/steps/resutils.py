@@ -5,15 +5,18 @@ from rdflib import Graph, ConjunctiveGraph, URIRef, Namespace
 from rdflib.namespace import RDF, RDFS, FOAF, SKOS, VOID
 import config
 import logging
+from time import sleep
 
 def ingest_data(context, data):
     r = context.session.post(config.acropolis_twine_remote_ingest, data=data, headers = {'Content-Type': 'text/x-nquads'})
     context.response = r
+    sleep(1)
     return context
 
 def clear_index(context):
-    context.session.post(config.acropolis_twine_remote_delete)
+    r = context.session.post(config.acropolis_twine_remote_delete)
     context.ingested.clear()
+    sleep(1)
     return context
 
 def get_graph_for(data):
