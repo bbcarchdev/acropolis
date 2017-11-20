@@ -36,3 +36,4 @@ autom4te.cache
 /test/.idea
 /test/__pycache__/
 /test/.*
+.vscode/
