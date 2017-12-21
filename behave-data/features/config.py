@@ -1,11 +1,11 @@
 from enum import Enum
 from rdflib import Namespace
 
-LOCALHOST = "http://ACROPOLIS_HOSTNAME/"
+LOCALHOST = "http://localhost/"
 LIVE = "http://acropolis.org.uk/"
 NA = "N/A"
 
-acropolis_twine_remote = "http://ACROPOLIS_HOSTNAME:8000"
+acropolis_twine_remote = "http://localhost:8000"
 acropolis_twine_remote_ingest = acropolis_twine_remote + '/ingest'
 acropolis_twine_remote_delete = acropolis_twine_remote + '/delete'
 
@@ -16,6 +16,7 @@ GEO = Namespace("http://www.w3.org/2003/01/geo/wgs84_pos#")
 CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 FRBR = Namespace("http://purl.org/vocab/frbr/core#")
 OLO = Namespace("http://purl.org/ontology/olo/core#")
+SCHEMA = Namespace("http://schema.org/")
 
 class Partition(Enum):
     AGENTS='agents'

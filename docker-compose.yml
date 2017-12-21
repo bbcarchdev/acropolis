@@ -9,6 +9,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - ACROPOLIS_HOSTNAME=localhost
     depends_on:
       - postgres
       - fourstore
@@ -99,6 +101,7 @@ services:
       - ./docker/run.sh
     environment:
       - HOST_NAME=localhost
+      - ACROPOLIS_HOSTNAME=localhost
     depends_on:
       - postgres
       - fourstore

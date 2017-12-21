@@ -8,6 +8,7 @@ from urllib import parse
 import resutils
 import config
 import logging
+import json
 
 ## GIVEN
 
@@ -137,16 +138,18 @@ def step_impl_count_relevant(context, proxy):
     assert_that(proxy_response, equal_to(None))
 
 
-@then('The number of relevant entities in the collection should be the same')
-def step_impl_relevant(context):
+@then('The number of relevant entities {types} in the collection should be the same')
+def step_impl_relevant(context, types):
     # Retreive proxy response
     proxy_response = resutils.get_proxy_for(context, resutils.clean(context.proxy_key))
     # Count objects on proxy graph
     report = resutils.count_objects_all(resutils.get_graph_for(proxy_response.content))
-    logging.info(str(context.relevant_dict)+"\n")
-    logging.info(str(report)+"\n")
+
+    # logging.info(json.dumps(context.relevant_dict, indent=1)+"\n")
+    # logging.info(json.dumps(report, indent=1)+"\n")
+
     # Compare proxy's counted objects to relevant dict from previous step count
-    flag = resutils.dict_compare([config.FRBR.Work, FOAF.Person], report, context.relevant_dict)
+    flag = resutils.dict_compare(types, report, context.relevant_dict)
     assert_that(flag , equal_to(True))
 
 @then('The proxy is associated with "{uri}"\'s proxy')

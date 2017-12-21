@@ -1,0 +1,80 @@
+<http://bbcimages.acropolis.org.uk/terms> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/terms.ttl> .
+<http://bbcimages.acropolis.org.uk/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcimages.acropolis.org.uk/terms.ttl> .
+<http://bbcimages.acropolis.org.uk/terms> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcimages.acropolis.org.uk/terms#id> <http://bbcimages.acropolis.org.uk/terms.ttl> .
+<http://bbcimages.acropolis.org.uk/terms#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Policy> <http://bbcimages.acropolis.org.uk/terms.ttl> .
+<http://bbcimages.acropolis.org.uk/terms#id> <http://www.w3.org/2000/01/rdf-schema#label> "Use of these images is subject to the terms and conditions which accompany them. Data licensed under the terms of the Open Government Licence, version 3."@en-gb  <http://bbcimages.acropolis.org.uk/terms.ttl> .
+
+<http://bbcimages.acropolis.org.uk/index.html> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcimages.acropolis.org.uk/#id> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.html> <http://purl.org/dc/terms/title> "BBC Images for Research & Education Space (HTML)"@en <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.html> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.html> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.ttl> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcimages.acropolis.org.uk/#id> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/title> "BBC Images for Research & Education Space (Turtle)"@en <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcimages.acropolis.org.uk/index.ttl> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcimages.acropolis.org.uk/index.html> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcimages.acropolis.org.uk/#id> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/#id> <http://purl.org/dc/terms/description> "Data describing a selection of images from the BBC Archives online stills library. It contains around 50,000 carefully selected images from the BBC archive. The media is licensed for educational and research reuse under the terms of the BBC Images for RES licence."@en <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/index.ttl> .
+<http://bbcimages.acropolis.org.uk/#id> <http://purl.org/dc/terms/title> "BBC Images for Research & Education Space"@en <http://bbcimages.acropolis.org.uk/index.ttl> .
+
+<http://bbcimages.acropolis.org.uk/207#id> <http://search.yahoo.com/mrss/player> <http://bbcimages.acropolis.org.uk/207/player> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Adams Gerry\" (Turtle format)"@en <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207/player> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/StillImage> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Member_of_parliament> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Belfast_West_(Assembly_constituency)> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Gerry_Adams> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcimages.acropolis.org.uk/207#id> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://schema.org/thumbnailUrl> <http://bbcimages.acropolis.org.uk/207/media/207-200x200.jpeg> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/title> "Adams Gerry"@en <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207/player> <http://www.w3.org/2003/12/exif/ns#width> "768"^^<http://www.w3.org/2001/XMLSchema#integer> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207/player> <http://purl.org/dc/terms/license> <http://bbcimages.acropolis.org.uk/terms#id> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207> <http://purl.org/dc/terms/hasFormat> <http://bbcimages.acropolis.org.uk/207.ttl> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/description> "Gerry Adams Sinn Fein MP for West Belfast"@en <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Adams Gerry\" "@en <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://rdfs.org/ns/void#inDataset> <http://bbcimages.acropolis.org.uk/#id> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Politics> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/net/lio#location> <http://sws.geonames.org/2641364/> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Photograph> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207/player> <http://www.w3.org/2003/12/exif/ns#height> "576"^^<http://www.w3.org/2001/XMLSchema#integer> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Sinn_F%C3%A9in> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Politician> <http://bbcimages.acropolis.org.uk/207.ttl> .
+<http://bbcimages.acropolis.org.uk/207/player> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcimages.acropolis.org.uk/207.ttl> .
+
+<http://bbcimages.acropolis.org.uk/950#id> <http://search.yahoo.com/mrss/player> <http://bbcimages.acropolis.org.uk/950/player> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"ANDREW PRINCE DUKE OF YORK 1\" "@en <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://purl.org/net/lio#location> <http://sws.geonames.org/2635167/> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"ANDREW PRINCE DUKE OF YORK 1\" (Turtle format)"@en <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://purl.org/dc/terms/title> "ANDREW PRINCE DUKE OF YORK 1"@en <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://schema.org/thumbnailUrl> <http://bbcimages.acropolis.org.uk/950/media/950-200x200.jpeg> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950/player> <http://www.w3.org/2003/12/exif/ns#width> "768"^^<http://www.w3.org/2001/XMLSchema#integer> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950/player> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/StillImage> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Photograph> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Gigabyte> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950/player> <http://purl.org/dc/terms/license> <http://bbcimages.acropolis.org.uk/terms#id> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950/player> <http://www.w3.org/2003/12/exif/ns#height> "576"^^<http://www.w3.org/2001/XMLSchema#integer> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950/player> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://purl.org/dc/terms/date> "1987-10-12"^^<http://www.w3.org/2001/XMLSchema#Date> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://rdfs.org/ns/void#inDataset> <http://bbcimages.acropolis.org.uk/#id> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcimages.acropolis.org.uk/950#id> <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950#id> <http://purl.org/dc/terms/description> "GB DUKE YORK PRINCE"@en <http://bbcimages.acropolis.org.uk/950.ttl> .
+<http://bbcimages.acropolis.org.uk/950> <http://purl.org/dc/terms/hasFormat> <http://bbcimages.acropolis.org.uk/950.ttl> <http://bbcimages.acropolis.org.uk/950.ttl> .

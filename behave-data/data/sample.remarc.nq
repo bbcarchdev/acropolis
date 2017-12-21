@@ -1,0 +1,140 @@
+<http://remarc.acropolis.org.uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://remarc.acropolis.org.uk/index.html> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://remarc.acropolis.org.uk/index.ttl> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/#id> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.html> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.html> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.html> <http://purl.org/dc/terms/title> "BBC Reminiscence Archive data for Research & Education Space (HTML)"@en <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.html> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/#id> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/title> "BBC Reminiscence Archive data for Research & Education Space (Turtle)"@en <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/index.ttl> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/#id> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://purl.org/dc/terms/description> "Data describing the video, audio and images made available in the BBC Reminiscence Archive.  The BBC Reminiscence Archive contains material designed to trigger memories in people with dementia.  It contains around 1500 media items from the BBC Archives from the 1930s to 2000s, and covering a range of subject matter.  The media is licensed for personal, educational and research reuse under the terms of the RemArc License. "@en <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://purl.org/dc/terms/title> "BBC Reminiscence Archive data for Research & Education Space"@en <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://rdfs.org/ns/void#subset> <http://remarc.acropolis.org.uk/audio#id> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://rdfs.org/ns/void#subset> <http://remarc.acropolis.org.uk/images#id> <http://remarc.acropolis.org.uk/index.ttl> .
+<http://remarc.acropolis.org.uk/#id> <http://rdfs.org/ns/void#subset> <http://remarc.acropolis.org.uk/videos#id> <http://remarc.acropolis.org.uk/index.ttl> .
+
+<http://remarc.acropolis.org.uk/audio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://remarc.acropolis.org.uk/audio.ttl> .
+<http://remarc.acropolis.org.uk/audio> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/audio.ttl> .
+<http://remarc.acropolis.org.uk/audio> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/audio#id> <http://remarc.acropolis.org.uk/audio.ttl> .
+<http://remarc.acropolis.org.uk/audio#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://remarc.acropolis.org.uk/audio.ttl> .
+<http://remarc.acropolis.org.uk/audio#id> <http://purl.org/dc/terms/description> "Data describing the videos made available in the BBC Reminiscence Archive.  The BBC Reminiscence Archive contains material designed to trigger memories in people with dementia. The media is licensed for personal, educational and research reuse under the terms of the RemArc License. "@en <http://remarc.acropolis.org.uk/audio.ttl> .
+<http://remarc.acropolis.org.uk/audio#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/audio.ttl> .
+<http://remarc.acropolis.org.uk/audio#id> <http://purl.org/dc/terms/title> "BBC Reminiscence Archive data as RDF (audio)"@en <http://remarc.acropolis.org.uk/audio.ttl> .
+<http://remarc.acropolis.org.uk/audio#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://remarc.acropolis.org.uk/audio.ttl> .
+
+<http://remarc.acropolis.org.uk/videos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://remarc.acropolis.org.uk/videos.ttl> .
+<http://remarc.acropolis.org.uk/videos> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/videos.ttl> .
+<http://remarc.acropolis.org.uk/videos> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/videos#id> <http://remarc.acropolis.org.uk/videos.ttl> .
+<http://remarc.acropolis.org.uk/videos#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://remarc.acropolis.org.uk/videos.ttl> .
+<http://remarc.acropolis.org.uk/videos#id> <http://purl.org/dc/terms/description> "Data describing the videos made available in the BBC Reminiscence Archive.  The BBC Reminiscence Archive contains material designed to trigger memories in people with dementia. The media is licensed for personal, educational and research reuse under the terms of the RemArc License. "@en <http://remarc.acropolis.org.uk/videos.ttl> .
+<http://remarc.acropolis.org.uk/videos#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/videos.ttl> .
+<http://remarc.acropolis.org.uk/videos#id> <http://purl.org/dc/terms/title> "BBC Reminiscence Archive data as RDF (videos)"@en <http://remarc.acropolis.org.uk/videos.ttl> .
+<http://remarc.acropolis.org.uk/videos#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://remarc.acropolis.org.uk/videos.ttl> .
+
+<http://remarc.acropolis.org.uk/images> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://remarc.acropolis.org.uk/images.ttl> .
+<http://remarc.acropolis.org.uk/images> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/images.ttl> .
+<http://remarc.acropolis.org.uk/images> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/images#id> <http://remarc.acropolis.org.uk/images.ttl> .
+<http://remarc.acropolis.org.uk/images#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://remarc.acropolis.org.uk/images.ttl> .
+<http://remarc.acropolis.org.uk/images#id> <http://purl.org/dc/terms/description> "Data describing the videos made available in the BBC Reminiscence Archive.  The BBC Reminiscence Archive contains material designed to trigger memories in people with dementia. The media is licensed for personal, educational and research reuse under the terms of the RemArc License. "@en <http://remarc.acropolis.org.uk/images.ttl> .
+<http://remarc.acropolis.org.uk/images#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/images.ttl> .
+<http://remarc.acropolis.org.uk/images#id> <http://purl.org/dc/terms/title> "BBC Reminiscence Archive data as RDF (images)"@en <http://remarc.acropolis.org.uk/images.ttl> .
+<http://remarc.acropolis.org.uk/images#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://remarc.acropolis.org.uk/images.ttl> .
+
+<http://remarc.acropolis.org.uk/terms> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/terms.ttl> .
+<http://remarc.acropolis.org.uk/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://remarc.acropolis.org.uk/terms.ttl> .
+<http://remarc.acropolis.org.uk/terms> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/terms#id> <http://remarc.acropolis.org.uk/terms.ttl> .
+<http://remarc.acropolis.org.uk/terms#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Policy> <http://remarc.acropolis.org.uk/terms.ttl> .
+<http://remarc.acropolis.org.uk/terms#id> <http://www.w3.org/2000/01/rdf-schema#label> "Accessible by all users under the Open Government Licence."@en-gb <http://remarc.acropolis.org.uk/terms.ttl> .
+
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Odetta> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Music> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/People> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Television> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/images/1960_Music_OdettaA.jpg> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/image/jpeg> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://search.yahoo.com/mrss/content> <http://remarc-assets.pilots.bbcconnectedstudio.co.uk/images/1960_Music_OdettaA.jpg> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta> <http://purl.org/dc/terms/hasFormat> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/JJ_Jones_(Skins)> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/frbr/core#Work> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Radio> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Folk_music> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/images/1960_Music_OdettaA.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Image> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://rdfs.org/ns/void#inDataset> <http://remarc.acropolis.org.uk/images#id> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/1960s> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"folk singer Odetta with J.J. Eden.\" "@en <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/images/1960_Music_OdettaA.jpg> <http://purl.org/dc/terms/license> <http://remarc.acropolis.org.uk/terms#id> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta#id> <http://purl.org/dc/terms/title> "folk singer Odetta with J.J. Eden." <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"folk singer Odetta with J.J. Eden.\" (Turtle format) "@en <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+<http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://remarc.acropolis.org.uk/1960_Music_Odetta.ttl> .
+
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/frbr/core#Work> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Animal> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://purl.org/dc/terms/title> "Chickens" <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.mp3> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/audio/mp3> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.mp3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Sound> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/2000s_(decade)> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://search.yahoo.com/mrss/content> <http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.mp3> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens> <http://purl.org/dc/terms/hasFormat> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.mp3> <http://purl.org/dc/terms/license> <http://remarc.acropolis.org.uk/terms#id> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Chicken> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Chickens\" "@en <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://search.yahoo.com/mrss/content> <http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.jpg> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Image> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.jpg> <http://purl.org/dc/terms/license> <http://remarc.acropolis.org.uk/terms#id> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens#id> <http://rdfs.org/ns/void#inDataset> <http://remarc.acropolis.org.uk/audio#id> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Chickens\" (Turtle format) "@en <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/audio/2000_Animals_ChickensA.jpg> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/image/jpeg> <http://remarc.acropolis.org.uk/2000_Animals_Chickens.ttl> .
+
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.mp4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/MovingImage> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://search.yahoo.com/mrss/content> <http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.ogv> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://rdfs.org/ns/void#inDataset> <http://remarc.acropolis.org.uk/videos#id> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/People> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/title> "A thaw after a cold spell brought floods to Lakenheath, Suffolk in 1959."@en <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/1950s> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"A thaw after a cold spell brought floods to Lakenheath, Suffolk in 1959.\" "@en <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.ogv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/MovingImage> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Suffolk> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/frbr/core#Work> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://search.yahoo.com/mrss/content> <http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.mp4> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.mp4> <http://purl.org/dc/terms/license> <http://remarc.acropolis.org.uk/terms#id> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Image> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.mp4> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/video/mp4> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.jpg> <http://purl.org/dc/terms/license> <http://remarc.acropolis.org.uk/terms#id> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Childhood> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Leisure> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"A thaw after a cold spell brought floods to Lakenheath, Suffolk in 1959.\" (Turtle format) "@en <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.jpg> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/image/jpeg> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Flood> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.ogv> <http://purl.org/dc/terms/license> <http://remarc.acropolis.org.uk/terms#id> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs> <http://purl.org/dc/terms/hasFormat> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs> <http://xmlns.com/foaf/0.1/primaryTopic> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://search.yahoo.com/mrss/content> <http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.jpg> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc-assets.pilots.bbcconnectedstudio.co.uk/video/19590112_People_WinterGVs.ogv> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/video/ogg> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .
+<http://remarc.acropolis.org.uk/19590112_People_WinterGVs#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Lakenheath> <http://remarc.acropolis.org.uk/19590112_People_WinterGVs.ttl> .

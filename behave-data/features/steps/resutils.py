@@ -80,8 +80,9 @@ def count_objects_all(graph):
 
 def dict_compare(typesList, dictA, dictB):
     for typeItem in typesList:
-        if dictA[typeItem] != dictB[typeItem]:
-            return False
+        if (typeItem in dictA) & (typeItem in dictB):
+            if dictA[typeItem] != dictB[typeItem]:
+                return False
 
     return True
 

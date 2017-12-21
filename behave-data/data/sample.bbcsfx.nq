@@ -1,0 +1,77 @@
+<http://bbcsfx.acropolis.org.uk/index.html> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/title> "BBC Sound EffectsA data for Research & Education Space (Turtle)"@en <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.html> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcsfx.acropolis.org.uk/#id> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcsfx.acropolis.org.uk/#id> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcsfx.acropolis.org.uk/index.ttl> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/#id> <http://purl.org/dc/terms/description> "BBC Sound EffectsA Description"@en <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.html> <http://purl.org/dc/terms/title> "BBC Sound EffectsA data for Research & Education Space (HTML)"@en <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.ttl> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcsfx.acropolis.org.uk/#id> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/index.html> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/#id> <http://purl.org/dc/terms/title> "BBC Sound Effects data for Research & Education Space"@en <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcsfx.acropolis.org.uk/index.html> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+<http://bbcsfx.acropolis.org.uk/#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/index.ttl> .
+
+<http://bbcsfx.acropolis.org.uk/terms#id> <http://www.w3.org/2000/01/rdf-schema#label> "Accessible by all users under the Open Government Licence."@en-gb <http://bbcsfx.acropolis.org.uk/terms.ttl> .
+<http://bbcsfx.acropolis.org.uk/terms> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/terms.ttl> .
+<http://bbcsfx.acropolis.org.uk/terms> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcsfx.acropolis.org.uk/terms#id> <http://bbcsfx.acropolis.org.uk/terms.ttl> .
+<http://bbcsfx.acropolis.org.uk/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcsfx.acropolis.org.uk/terms.ttl> .
+<http://bbcsfx.acropolis.org.uk/terms#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Policy> <http://bbcsfx.acropolis.org.uk/terms.ttl> .
+
+<http://bbcsfx.acropolis.org.uk/00008000.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"African market\" (Turtle format)"@en <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/NewsSFX1#id> <http://www.w3.org/2000/01/rdf-schema#label> "BBC News Sound Effects Tape" <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcsfx.acropolis.org.uk/00008000#id> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://www.w3.org/2000/01/rdf-schema#label> "African market"@en <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://schema.org/duration> "PT0M29S" <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/BBC_News_(TV_channel)> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000> <http://purl.org/dc/terms/hasFormat> <http://bbcsfx.acropolis.org.uk/00008000.ttl> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/NewsSFX1#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/MusicAlbum> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/assets/00008000.wav> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Sound> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/frbr/core#Work> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://schema.org/inAlbum> <http://bbcsfx.acropolis.org.uk/NewsSFX1#id> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/assets/00008000.wav> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/audio/wav> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/assets/00008000.wav> <http://purl.org/dc/terms/license> <http://bbcsfx.acropolis.org.uk/terms#id> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://schema.org/position> "1"^^<http://www.w3.org/2001/XMLSchema#integer> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://search.yahoo.com/mrss/content> <http://bbcsfx.acropolis.org.uk/assets/00008000.wav> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://rdfs.org/ns/void#inDataset> <http://bbcsfx.acropolis.org.uk/#id> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+<http://bbcsfx.acropolis.org.uk/00008000#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Sound_effect> <http://bbcsfx.acropolis.org.uk/00008000.ttl> .
+
+<http://bbcsfx.acropolis.org.uk/07076050.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://www.w3.org/2000/01/rdf-schema#label> "Single-cylinder Petter engine, start, run stop. (1 1/2 h.p.)"@en <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://search.yahoo.com/mrss/content> <http://bbcsfx.acropolis.org.uk/assets/07076050.wav> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Engine> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/EC117D#id> <http://www.w3.org/2000/01/rdf-schema#label> "Diesel & Petrol Engines" <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcsfx.acropolis.org.uk/07076050#id> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://schema.org/duration> "PT3M14S" <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://rdfs.org/ns/void#inDataset> <http://bbcsfx.acropolis.org.uk/#id> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050> <http://purl.org/dc/terms/hasFormat> <http://bbcsfx.acropolis.org.uk/07076050.ttl> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Single-cylinder_engine> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Single-cylinder Petter engine, start, run stop. (1 1/2 h.p.)\" (Turtle format)"@en <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Horsepower> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/frbr/core#Work> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/EC117D#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/MusicAlbum> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://schema.org/position> "1"^^<http://www.w3.org/2001/XMLSchema#integer> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/assets/07076050.wav> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Sound> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://schema.org/inAlbum> <http://bbcsfx.acropolis.org.uk/EC117D#id> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Diesel_engine> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/assets/07076050.wav> <http://purl.org/dc/terms/license> <http://bbcsfx.acropolis.org.uk/terms#id> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/07076050#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Petrol_engine> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .
+<http://bbcsfx.acropolis.org.uk/assets/07076050.wav> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/audio/wav> <http://bbcsfx.acropolis.org.uk/07076050.ttl> .

@@ -1,0 +1,95 @@
+<http://bbcworldwide.acropolis.org.uk/index.html> <http://purl.org/dc/terms/title> "BBC Worldwide data for Research & Education Space (HTML)"@en <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcworldwide.acropolis.org.uk/index.html> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/#id> <http://purl.org/dc/terms/title> "BBC Worldwide data for Research & Education Space"@en <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/#id> <http://purl.org/dc/terms/description> "BBC Worldwide data"@en <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#Dataset> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/#id> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/#id> <http://rdfs.org/ns/void#feature> <http://www.w3.org/ns/formats/Turtle> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcworldwide.acropolis.org.uk/#id> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.html> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.html> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcworldwide.acropolis.org.uk/#id> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/> <http://purl.org/dc/terms/hasFormat> <http://bbcworldwide.acropolis.org.uk/index.ttl> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfs.org/ns/void#DatasetDescription> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/title> "BBC Worldwide data for Research & Education Space (Turtle)"@en <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.html> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.ttl> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcworldwide.acropolis.org.uk/#id> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+<http://bbcworldwide.acropolis.org.uk/index.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/index.ttl> .
+
+<http://bbcworldwide.acropolis.org.uk/terms> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/terms.ttl> .
+<http://bbcworldwide.acropolis.org.uk/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcworldwide.acropolis.org.uk/terms.ttl> .
+<http://bbcworldwide.acropolis.org.uk/terms#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Policy> <http://bbcworldwide.acropolis.org.uk/terms.ttl> .
+<http://bbcworldwide.acropolis.org.uk/terms> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcworldwide.acropolis.org.uk/terms#id> <http://bbcworldwide.acropolis.org.uk/terms.ttl> .
+<http://bbcworldwide.acropolis.org.uk/terms#id> <http://www.w3.org/2000/01/rdf-schema#label> "Accessible by all users under the Open Government Licence."@en-gb <http://bbcworldwide.acropolis.org.uk/terms.ttl> .
+
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Closed-circuit_television> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Cuteness> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<https://www.youtube.com/embed/8lZRalFNUSI> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Snow_leopard> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<https://www.youtube.com/channel/UCbwp5B-uDBy-fS4bDA0TEaw> <http://www.w3.org/2000/01/rdf-schema#label> "BBC Earth Unplugged" <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/ontology/po/synopsis> "Two Snow Leopard cubs come out of their den for the first time at Twycross Zoo in the UK. Chris is there to film the moment and watches CCTV of the birth itself.                                                                                                                                     \nhttp://www.twycrosszoo.org/home.aspx\nhttp://www.twycrosszoo.org/snow-leopard.aspx"@en <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/description> "Two Snow Leopard cubs come out of their den for the first time at Twycross Zoo in the UK. Chris is there to film the moment and watches CCTV of the birth itself.                                                                                                                                     \nhttp://www.twycrosszoo.org/home.aspx\nhttp://www.twycrosszoo.org/snow-leopard.aspx"@en <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://rdfs.org/ns/void#inDataset> <http://bbcworldwide.acropolis.org.uk/#id> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://www.w3.org/2000/01/rdf-schema#label> "Rare Snow Leopard Cubs Born"@en <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/language> "en-GB" <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<https://www.youtube.com/embed/8lZRalFNUSI> <http://purl.org/dc/terms/license> <http://bbcworldwide.acropolis.org.uk/terms#id> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Big_cat> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Rare Snow Leopard Cubs Born\" (Turtle format)"@en <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/United_Kingdom> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/ontology/po/channel> <https://www.youtube.com/channel/UCbwp5B-uDBy-fS4bDA0TEaw> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Film> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<https://www.youtube.com/embed/8lZRalFNUSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/MovingImage> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/po/Clip> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<https://www.youtube.com/channel/UCbwp5B-uDBy-fS4bDA0TEaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/po/Channel> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Chicago_Cubs> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Twycross_Zoo> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://search.yahoo.com/mrss/player> <https://www.youtube.com/embed/8lZRalFNUSI> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI> <http://purl.org/dc/terms/hasFormat> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+<http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI#id> <http://bbcworldwide.acropolis.org.uk/8lZRalFNUSI.ttl> .
+
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://www.w3.org/2000/01/rdf-schema#label> "Fan Q&A With Sue Vertue & Louis Moffat"@en <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<https://www.youtube.com/embed/ISzGRivf6J8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/MovingImage> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8> <http://purl.org/dc/terms/hasFormat> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/BBC_Worldwide> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Benedict_Cumberbatch> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<https://www.youtube.com/channel/UCkp_CAX1eIc5k5SavzbhN5w> <http://www.w3.org/2000/01/rdf-schema#label> "Sherlock" <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Moffat> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "Information about \"Fan Q&A With Sue Vertue & Louis Moffat\" (Turtle format)"@en <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/po/Clip> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<https://www.youtube.com/embed/ISzGRivf6J8> <http://purl.org/dc/terms/license> <http://bbcworldwide.acropolis.org.uk/terms#id> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Steven_Moffat> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/BBC_One> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<https://www.youtube.com/embed/ISzGRivf6J8> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<https://www.youtube.com/channel/UCkp_CAX1eIc5k5SavzbhN5w> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/ontology/po/Channel> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8> <http://xmlns.com/foaf/0.1/primaryTopic> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Inspector_Lestrade> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Mark_Gatiss> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Sue_Vertue> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/language> "en-GB" <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/formats/Turtle> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/ontology/po/synopsis> "Louis Moffat asks Sue Vertue some fan questions including some juicy tidbits about the upcoming special."@en <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://search.yahoo.com/mrss/player> <https://www.youtube.com/embed/ISzGRivf6J8> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> <http://purl.org/dc/terms/license> <http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Sherlock_Holmes> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/BBC> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Rupert_Graves> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://rdfs.org/ns/void#inDataset> <http://bbcworldwide.acropolis.org.uk/#id> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/description> "Louis Moffat asks Sue Vertue some fan questions including some juicy tidbits about the upcoming special."@en <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Baker_Street> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/ontology/po/channel> <https://www.youtube.com/channel/UCkp_CAX1eIc5k5SavzbhN5w> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Sherlock_(TV_series)> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/John_Watson_(college_president)> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .
+<http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8#id> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Martin_Freeman> <http://bbcworldwide.acropolis.org.uk/ISzGRivf6J8.ttl> .

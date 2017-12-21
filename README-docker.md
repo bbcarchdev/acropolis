@@ -30,10 +30,10 @@ Alternatively, you can build the platform using [supervisor](http://supervisord.
 This has been used to spin up platform for BDD testing, see `behave.yml` on `acropolis-bdd` image.
 
 > Build
-`docker-compose -f behave.yml build acropolis-bdd`
+`docker-compose -f behave.yml build`
 
 > Run
-`docker-compose -f behave.yml up acropolis-bdd`
+`docker-compose -f behave.yml up`
 
 ### Note:
 Building on OSX, if the build fails on COPY then removing the .dockerignore file is the easiest way to resolve this.

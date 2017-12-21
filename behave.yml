@@ -6,7 +6,7 @@ services:
     entrypoint:
       - docker/init_db.sh
     environment:
-      - ACROPOLIS_HOSTNAME=acropolis.localhost
+      - ACROPOLIS_HOSTNAME=localhost
     command: supervisord
     build:
       context: .
@@ -26,19 +26,19 @@ services:
      - 80:80
      - 8000:8000
 
-  behave:
-    container_name: behave
-    command: behave
-    #features/partitions.feature
-    environment:
-      - ACROPOLIS_HOSTNAME=acropolis.localhost
-    build:
-      context: .
-      dockerfile: Dockerfile-behave
-    depends_on:
-      - acropolis-bdd
-    links:
-      - acropolis-bdd:acropolis.localhost
+  # behave:
+  #   container_name: behave
+  #   command: behave
+  #   #features/partitions.feature
+  #   environment:
+  #     - ACROPOLIS_HOSTNAME=acropolis.localhost
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile-behave
+  #   depends_on:
+  #     - acropolis-bdd
+  #   links:
+  #     - acropolis-bdd:acropolis.localhost
 
 
   # DB used to store the indexes

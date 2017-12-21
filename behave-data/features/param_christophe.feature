@@ -13,7 +13,7 @@ Scenario: Number of proxies in the collection
 	When I request everything
 	When I count the amount of relevant entities that are ingested
 	Then a proxy exists for 'http://shakespeare.acropolis.org.uk/#id'
-	And The number of relevant entities in the collection should be the same
+	And The number of relevant entities [config.FRBR.Work, FOAF.Person] in the collection should be the same
 
 Scenario: Associated media
 	Given some ingested test data shakespeare-sample.nq
